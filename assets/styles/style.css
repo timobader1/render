@@ -1,6 +1,4 @@
 main {
-    
-  
     text-align: center;
 }
 
@@ -26,6 +24,17 @@ html{
 p, h1, h2{
     color: white;
 }
+
+p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 #ueberschrift{
     color: black;
 }
@@ -36,14 +45,49 @@ footer{
     
 }
 
+.btn {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#imgButton {
+    margin: 0;
+}
+
 header{
     
     position: sticky;
     top: 0;
 }
 .container-fluid{
-    overflow:hidden;
+    overflow: hidden;
 }
+
+#firstChapter {
+    border-bottom: solid;
+    border-color: white;
+    padding: 2rem;
+}
+
+#secondChapter {
+    padding: 2rem;
+}
+
+#table1, #table2, #table3 {
+    gap: 5;
+}
+
+#table1 .row, #table2 .row, #table3 .row {
+    margin: 1rem;
+    margin-top: 0;
+}
+
+#table1 .col, #table2 .col, #table3 .col {
+    margin: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 @media(max-width: 768px){
     .bg-image{
         background-size: auto;}
