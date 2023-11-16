@@ -1,0 +1,1 @@
+const Sails = require("sails/lib/app/Sails");

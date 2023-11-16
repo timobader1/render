@@ -21,6 +21,8 @@ module.exports.routes = {
 
   '/': { view: 'pages/Home' },
   '/anmelden': { view: 'pages/Login' },
+  '/Admin': {view: 'pages/Admin'},
+  
 
 
   /***************************************************************************
@@ -33,6 +35,6 @@ module.exports.routes = {
   * not match any of those, it is matched against static assets.             *
   *                                                                          *
   ***************************************************************************/
-
+  'GET /carbrand': { controller: 'CarBrandController', action: 'find' },
 
 };
