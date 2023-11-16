@@ -14,9 +14,9 @@ module.exports = {
     },
   
     destroyOne: async function (req, res) {
-      sails.log.debug("Destroy Category....")
-      await Category.destroyOne({ id: req.params.id });
-      res.redirect('/category');
+      sails.log.debug("Destroy Product....")
+      await Product.destroyOne({ id: req.params.id });
+      res.redirect('/products');
     },
     new: async function (req, res) {
       let carbrands = await CarBrand.find();

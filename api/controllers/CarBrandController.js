@@ -16,6 +16,6 @@ module.exports = {
   destroyOne: async function (req, res) {
     sails.log.debug("Destroy Brand....")
     await CarBrand.destroyOne({ id: req.params.id });
-    res.redirect('/home');
+    res.redirect('/carbrand');
   },
 };
