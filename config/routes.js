@@ -36,5 +36,6 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
   'GET /carbrand': { controller: 'CarBrandController', action: 'find' },
+  'GET /carmodel': { controller: 'CarModelController', action: 'find' },
 
 };

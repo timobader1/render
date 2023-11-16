@@ -8,9 +8,9 @@ module.exports = {
     },
   
     find: async function (req, res) {
-      sails.log.debug("List Category....")
-      categories = await Category.find();
-      res.view('pages/category/index', { categories });
+      sails.log.debug("List Model....")
+      carmodels = await CarModel.find();
+      res.view('pages/CarModel/index', { carmodels });
     },
   
     destroyOne: async function (req, res) {
