@@ -4,7 +4,7 @@ module.exports = {
   create: async function (req, res) {
     sails.log.debug("Create new Brand....")
     let brand = await CarBrand.create(req.allParams());
-    res.redirect('/home');
+    res.redirect('/carbrand');
   },
 
   find: async function (req, res) {

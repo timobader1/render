@@ -48,31 +48,19 @@
             </div>
         </nav>
     </header>
-<div class="container">
-    <h1>Modelle</h1>
-
-    <div class="item-content">
-        <table class="table">
-            <thead>
-                <th>Name</th>
-                <th>Marke</th>
-            </thead>
-            <tbody>
-                <% carmodels.forEach(function(carmodel){ %>
-                    <tr>
-                        <td>
-                             <%= carmodel.name %>
-                        </td>
-                        <td>
-                            <%= carmodel.carbrand.name %>
-                        </td>
-                    </tr>
-                    <% }); %>
-            </tbody>
-        </table>
+<main>
+    <div class="container">
+        <form action="/category" method="post">
+            <div>
+                <div class="form-group">
+                    <label class="col-form-label-lg">Name</label>
+                    <input type="text" class="form-control" maxlength="50" name="name">
+                </div>
+            </div>
+            <button type="submit" class="green-button mt-4">Hinzufügen</button>
+        </form>
     </div>
-</div>
-</div>
+</main>
 <footer>
     <div class="container-fluid">
         <div class="row">

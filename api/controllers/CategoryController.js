@@ -10,7 +10,7 @@ module.exports = {
     find: async function (req, res) {
       sails.log.debug("List Category....")
       categories = await Category.find();
-      res.view('pages/category/index', { categories });
+      res.view('pages/Category/index', { categories });
     },
   
     destroyOne: async function (req, res) {

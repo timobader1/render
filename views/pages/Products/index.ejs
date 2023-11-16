@@ -49,22 +49,33 @@
         </nav>
     </header>
 <div class="container">
-    <h1>Modelle</h1>
+    <h1>Produkte</h1>
 
     <div class="item-content">
         <table class="table">
             <thead>
                 <th>Name</th>
-                <th>Marke</th>
+                <th>Beschreibung</th>
+                <th>Modell</th>
+                <th>Kategorie</th>
             </thead>
             <tbody>
-                <% carmodels.forEach(function(carmodel){ %>
+                <% products.forEach(function(product){ %>
                     <tr>
                         <td>
-                             <%= carmodel.name %>
+                             <%= product.titel %>
                         </td>
                         <td>
-                            <%= carmodel.carbrand.name %>
+                            <%= product.beschreibung %>
+                       </td>
+                       <td>
+                        <%= product.carmodel.name %>
+                   </td>
+                   <td>
+                    <%= product.category.name %>
+               </td>
+                        <td>
+                          
                         </td>
                     </tr>
                     <% }); %>
