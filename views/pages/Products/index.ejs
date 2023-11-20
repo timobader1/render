@@ -50,7 +50,9 @@
     </header>
 <div class="container">
     <h1>Produkte</h1>
-
+    <div class="col" style="height: 7vh" ;>
+        <a class="btn btn-outline-light btn-lg " href="/products/new">Produkt hinzufügen</a>
+    </div>
     <div class="item-content">
         <table class="table">
             <thead>
@@ -69,10 +71,10 @@
                             <%= product.beschreibung %>
                        </td>
                        <td>
-                        <%= product.carmodel.name %>
+                        <%= product.carmodel %>
                    </td>
                    <td>
-                    <%= product.category.name %>
+                    <%= product.category %>
                </td>
                <td>
                 <a class="button" href="/products/<%= product.id %>/destroy">löschen</a>
