@@ -22,6 +22,7 @@ module.exports.routes = {
   '/': { view: 'pages/Home' },
   '/anmelden': { view: 'pages/Login' },
   '/Admin': {view: 'pages/Admin'},
+  '/search': {view: 'pages/search'},
   
 
 
