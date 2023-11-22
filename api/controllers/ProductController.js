@@ -14,6 +14,9 @@ module.exports = {
       products = await Product.find({
         titel: {
           'contains': req.query.q
+        },
+        category: {
+          'contains': req.query.cat
         }
       }).populate("category");
     } else {
