@@ -50,21 +50,17 @@
             </header>
         </div>
         <div class="col-12 flex-grow-1 p-2">
-            <main>
+            <main class="h-100 ">
                 <div class="container-fluid">
-                    <div class="col-md-12">
-                        <form action="/products">
-                            <div class="form-group">
-                                <label class="col-form-label-lg text-white">Marke</label>
-                                <select class="form-control" name="carbrand">
-                                    
-                                </select>
-                            </div>
-                            <label class="text-white">Suche</label>
-                            <input type="text" value="" length="20" name="q">
-                            <input type="text" value="" length="20" name="cat">
-                            <button class="green-button" type="submit">Suche</button>
-                        </form>
+                    <div class="row">
+                        <div class="col-12 ">
+                            <form action="/products">
+                                <label class="text-white">Suche</label>
+                                <input placeholder="Artikel" type="text" value="" size="40" name="q">
+                                <input placeholder="Max-Preis" type="text" value="" size="10" name="cat">
+                                <button class="btn btn-light btn-lg" type="submit">Suche</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </main>
