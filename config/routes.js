@@ -57,4 +57,5 @@ module.exports.routes = {
   'GET /products/new': {controller:'ProductController', action:'new'},
   'POST /products': {controller: 'ProductController', action:'create'},
   'GET /products/:id/destroy': {controller:'ProductController', action: 'destroyOne'},
+  'GET /products/:id': 'product.findOne',
 };

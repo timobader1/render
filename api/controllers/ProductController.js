@@ -34,8 +34,8 @@ module.exports = {
       res.redirect('/products');
     },
     findOne: async function (req, res) {
-      sails.log.debug("List single meal....")
-      let meal = await Meal.findOne({ id: req.params.id });
-      res.view ('pages/products/show', { meal: meal } );
+      sails.log.debug("List single Product....")
+      let product = await Product.findOne({ id: req.params.id });
+      res.view ('pages/Products/show', { product } );
     },
   };

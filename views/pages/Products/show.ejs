@@ -54,7 +54,38 @@
         </div>
         <div class="col-12 flex-grow-1 p-2">
             <main>
-
+                <div class="container">
+                    <div class="card w-100 mt-4">
+                        <h4 class="card-header">
+                            Produkt anzeigen
+                        </h4>
+                        <div>
+                            <div class="row">
+                                <div class="col-2">
+                                    Name
+                                </div> 
+                                <div class="col-10">
+                                    <%= product.titel %>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    Beschreibung
+                                </div> 
+                                <div class="col-10">
+                                    <%= product.beschreibung %>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    Bild
+                                </div> 
+                                <div class="col-10">
+                                    <%= product.bild %>
+                                </div>
+                            </div>
+                    </div>
+                </div>
             </main>
         </div>
         <div class="col-12 d-flex flex-column p-0">
