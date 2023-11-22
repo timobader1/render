@@ -1,0 +1,49 @@
+const Sails = require("sails/lib/app/Sails");
+
+module.exports = {
+    create: async function (req, res) {
+      sails.log.debug("Create new Product....")
+      let product = await Product.create(req.allParams());
+      res.redirect('/product');
+    },
+  
+    find: async function (req, res) {
+      sails.log.debug("List all Products....")
+      let products;
+      if (req.query.q && req.query.q.length > 0) {
+        products = await Product.find({
+          name: {
+            'contains': req.query.q
+          }
+        })
+      } else {
+        products = await Product.find().populate("category");
+      }
+      res.view ('pages/products', { Products: products } );
+    },
+    destroyOne: async function (req, res) {
+      sails.log.debug("Destroy Product....")
+      await Product.destroyOne({ id: req.params.id });
+      res.redirect('/products');
+    },
+    new: async function (req, res) {
+      let carbrands = await CarBrand.find();
+      let categories = await Category.find();
+      res.view('pages/Products/new', { carbrands, categories });
+    },
+    editOne: async function (req, res) {
+      sails.log.debug("Edit single Product....")
+      let meal = await Product.findOne({ id: req.params.id }).populate('category');
+      res.view('pages/meal/edit', { meal: meal });
+    },
+    updateOne: async function (req, res) {
+      sails.log.debug("Update single Product....")
+      let meal = await Product.updateOne({ id: req.params.id }).set(req.body);
+      res.redirect('/products');
+    },
+    findOne: async function (req, res) {
+      sails.log.debug("List single meal....")
+      let meal = await Meal.findOne({ id: req.params.id });
+      res.view ('pages/products/show', { meal: meal } );
+    },
+  };
