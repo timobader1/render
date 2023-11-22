@@ -49,6 +49,10 @@ p {
     margin-bottom: 1rem;
 }
 
+.col {
+    padding: 0;
+}
+
 #table1,
 #table2,
 #table3 {

@@ -8,18 +8,9 @@ module.exports = {
     },
   
     find: async function (req, res) {
-      sails.log.debug("List all Products....")
-      let products;
-      if (req.query.q && req.query.q.length > 0) {
-        products = await Product.find({
-          name: {
-            'contains': req.query.q
-          }
-        })
-      } else {
-        products = await Product.find().populate("category");
-      }
-      res.view ('pages/products', { Products: products } );
+      sails.log.debug("List Products....")
+      products = await Product.find();
+      res.view('pages/Products/index', { products });
     },
     destroyOne: async function (req, res) {
       sails.log.debug("Destroy Product....")
@@ -29,7 +20,8 @@ module.exports = {
     new: async function (req, res) {
       let carbrands = await CarBrand.find();
       let categories = await Category.find();
-      res.view('pages/Products/new', { carbrands, categories });
+      let carmodels = await CarModel.find();
+      res.view('pages/Products/new', { carbrands, categories, carmodels });
     },
     editOne: async function (req, res) {
       sails.log.debug("Edit single Product....")
