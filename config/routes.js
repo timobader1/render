@@ -20,9 +20,10 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/Home' },
-  '/anmelden': { view: 'pages/Login' },
+  '/Anmelden': { view: 'pages/Login' },
   '/Admin': {view: 'pages/Admin'},
-  '/search': {view: 'pages/search'},
+  '/Suche': {view: 'pages/search'},
+  '/Start': { view: 'pages/Home' },
   
 
 
