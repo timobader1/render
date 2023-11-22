@@ -55,35 +55,47 @@
         <div class="col-12 flex-grow-1 p-2">
             <main>
                 <div class="container">
-                    <div class="card w-100 mt-4">
-                        <h4 class="card-header">
-                            Produkt anzeigen
-                        </h4>
-                        <div>
+                    <h2>Produkt</h2>
+                    <div class="card w-100 p-0">
+                        <div class="card-header p-4">
+                            <h4><b>Produkt anzeigen</b></h4>
+                        </div>
+                        <div class="container-fluid">
                             <div class="row">
-                                <div class="col-2">
-                                    Name
-                                </div> 
-                                <div class="col-10">
-                                    <%= product.titel %>
+                                <div class="col-3 p-0">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item p-4">
+                                            <b>Name</b>
+                                        </li>
+                                        <li class="list-group-item p-4">
+                                            <b>Beschreibung</b>
+                                        </li>
+                                        <li class="list-group-item p-4">
+                                            <b>Bild</b>
+                                        </li>
+                                        <li class="list-group-item p-4">
+                                            <b>Preis</b>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-9 p-0">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item p-4">
+                                            <%= product.titel %>
+                                        </li>
+                                        <li class="list-group-item p-4">
+                                            <%= product.beschreibung %>
+                                        </li>
+                                        <li class="list-group-item p-4">
+                                            <%= product.bild %>
+                                        </li>
+                                        <li class="list-group-item p-4">
+                                            Preis
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-2">
-                                    Beschreibung
-                                </div> 
-                                <div class="col-10">
-                                    <%= product.beschreibung %>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-2">
-                                    Bild
-                                </div> 
-                                <div class="col-10">
-                                    <%= product.bild %>
-                                </div>
-                            </div>
+                        </div>
                     </div>
                 </div>
             </main>

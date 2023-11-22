@@ -56,16 +56,17 @@
             <main>
                 <div class="container">
                     <h1>Produkte</h1>
-                    <div class="col" style="height: 7vh" ;>
+                    <div class="col vh-7">
                         <a class="btn btn-outline-light btn-lg " href="/products/new">Produkt hinzufügen</a>
                     </div>
                     <div class="item-content">
-                        <table class="table">
-                            <thead>
-                                <th>Name</th>
-                                <th>Beschreibung</th>
-                                <th>Modell</th>
-                                <th>Kategorie</th>
+                        <table class="table table-bordered border-black table-striped">
+                            <thead class="table-active">
+                                <th scope="col">Name</th>
+                                <th scope="col">Modell</th>
+                                <th scope="col">Kategorie</th>
+                                <th scope="col">Preis</th>
+                                <th scope="col" colspan="3">Optionen</th>
                             </thead>
                             <tbody>
                                 <% products.forEach(function(product){ %>
@@ -74,19 +75,22 @@
                                             <%= product.titel %>
                                         </td>
                                         <td>
-                                            <%= product.beschreibung %>
-                                        </td>
-                                        <td>
                                             <%= product.carmodel %>
                                         </td>
                                         <td>
                                             <%= product.category %>
                                         </td>
                                         <td>
-                                            <a class="button" href="/products/<%= product.id %>/destroy">löschen</a>
+                                            Preis
                                         </td>
                                         <td>
-                                            <a class="button" href="/products/<%= product.id %>">anzeigen</a>
+                                            <a class="button text-black" href="/products/<%= product.id %>">anzeigen</a>
+                                        </td>
+                                        <td>
+                                            <a class="button text-black" href="/products/<%= product.id %>/edit">bearbeiten</a>
+                                        </td>
+                                        <td>
+                                            <a class="button text-black" href="/products/<%= product.id %>/destroy">löschen</a>
                                         </td>
                                     </tr>
                                     <% }); %>

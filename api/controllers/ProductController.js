@@ -18,19 +18,21 @@ module.exports = {
       res.redirect('/products');
     },
     new: async function (req, res) {
-      let carbrands = await CarBrand.find();
+      /*let carbrands = await CarBrand.find();*/
       let categories = await Category.find();
       let carmodels = await CarModel.find();
-      res.view('pages/Products/new', { carbrands, categories, carmodels });
+      res.view('pages/Products/new', { /*carbrands,*/ categories, carmodels });
     },
     editOne: async function (req, res) {
       sails.log.debug("Edit single Product....")
-      let meal = await Product.findOne({ id: req.params.id }).populate('category');
-      res.view('pages/meal/edit', { meal: meal });
+      let categories = await Category.find();
+      let carmodels = await CarModel.find();
+      let products = await Product.findOne({ id: req.params.id }).populate('category');
+      res.view('pages/Products/edit', { products, categories, carmodels});
     },
     updateOne: async function (req, res) {
       sails.log.debug("Update single Product....")
-      let meal = await Product.updateOne({ id: req.params.id }).set(req.body);
+      let products = await Product.updateOne({ id: req.params.id }).set(req.body);
       res.redirect('/products');
     },
     findOne: async function (req, res) {

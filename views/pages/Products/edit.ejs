@@ -51,7 +51,47 @@
         </div>
         <div class="col-12 flex-grow-1 p-2">
             <main>
-
+                <div class="container">
+                    <h2>Bearbeiten</h2>
+                    <form action="/product/<%=products.id%>/update" method="post">
+                        <div>
+                            <div class="form-group">
+                                <label class="col-form-label-lg text-white">Titel</label>
+                                <input type="text" class="form-control" maxlength="50" value="<%= products.titel %>" name="titel">
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label-lg text-white">Beschreibung</label>
+                                <input type="text" class="form-control" maxlength="200" value="<%= products.beschreibung %>" name="beschreibung">
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label-lg text-white">Bild</label>
+                                <input type="text" class="form-control" maxlength="50" value="<%= products.bild %>" name="bild">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="col-form-label-lg text-white">Modell</label>
+                            <select class="form-control" name="carmodel">
+                                <% carmodels.forEach(function(carmodel){ %>
+                                    <option value="<%= carmodel.id %>">
+                                        <%= carmodel.name %>
+                                    </option>
+                                    <% }); %>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label-lg text-white">Kategorie</label>
+                            <select class="form-control" name="category">
+                                <% categories.forEach(function(category){ %>
+                                    <option value="<%= category.id %>">
+                                        <%= category.name %>
+                                    </option>
+                                    <% }); %>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-4">Aktualisieren</button>
+                    </form>
+                </div>
             </main>
         </div>
         <div class="col-12 d-flex flex-column p-0">

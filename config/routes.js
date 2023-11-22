@@ -20,10 +20,10 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/Home' },
-  '/Anmelden': { view: 'pages/Login' },
-  '/Admin': {view: 'pages/Admin'},
-  '/Suche': {view: 'pages/search'},
-  '/Start': { view: 'pages/Home' },
+  'GET /Anmelden': { view: 'pages/Login' },
+  'GET /Admin': {view: 'pages/Admin'},
+  'GET /Suche': {view: 'pages/search'},
+  'GET /Start': { view: 'pages/Home' },
   
 
 
@@ -58,4 +58,6 @@ module.exports.routes = {
   'POST /products': {controller: 'ProductController', action:'create'},
   'GET /products/:id/destroy': {controller:'ProductController', action: 'destroyOne'},
   'GET /products/:id': 'product.findOne',
+  'GET /products/:id/edit': {controller:'ProductController', action: 'editOne'},
+  'POST /products/:id/update': {controller:'ProductController', action: 'updateOne'},
 };

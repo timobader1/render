@@ -4,10 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TurboParts24</title>
-
-
-
+    <title>TurboParts24 New</title>
 </head>
 
 <body class="container-fluid vh-100 p-0">
@@ -55,24 +52,29 @@
         <div class="col-12 flex-grow-1 p-2">
             <main>
                 <div class="container">
+                    <h2>Neues Produkt</h2>
                     <form action="/product" method="post">
                         <div>
                             <div class="form-group">
-                                <label class="col-form-label-lg">Titel</label>
+                                <label class="col-form-label-lg text-white">Titel</label>
                                 <input type="text" class="form-control" maxlength="50" name="titel">
                             </div>
                             <div class="form-group">
-                                <label class="col-form-label-lg">Beschreibung</label>
+                                <label class="col-form-label-lg text-white">Beschreibung</label>
                                 <input type="text" class="form-control" maxlength="200" name="beschreibung">
                             </div>
                             <div class="form-group">
-                                <label class="col-form-label-lg">Bild</label>
+                                <label class="col-form-label-lg text-white">Bild</label>
                                 <input type="text" class="form-control" maxlength="50" name="bild">
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label-lg text-white">Preis</label>
+                                <input type="text" class="form-control" maxlength="50" name="preis">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="col-form-label-lg">Modell</label>
+                            <label class="col-form-label-lg text-white">Modell</label>
                             <select class="form-control" name="carmodel">
                                 <% carmodels.forEach(function(carmodel){ %>
                                     <option value="<%= carmodel.id %>">
@@ -82,7 +84,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label class="col-form-label-lg">Kategorie</label>
+                            <label class="col-form-label-lg text-white">Kategorie</label>
                             <select class="form-control" name="category">
                                 <% categories.forEach(function(category){ %>
                                     <option value="<%= category.id %>">
