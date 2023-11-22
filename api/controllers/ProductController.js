@@ -8,9 +8,19 @@ module.exports = {
     },
   
     find: async function (req, res) {
-      sails.log.debug("List Products....")
-      products = await Product.find();
-      res.view('pages/Products/index', { products });
+      sails.log.debug("List all Products....")
+    let products;
+    if (req.query.q && req.query.q.length > 0) {
+      products = await Product.find({
+        titel: {
+          'contains': req.query.q
+        }
+      }).populate("category");
+    } else {
+      products = await Product.find().populate("category");
+      
+    }
+    res.view ('pages/products/index', { products } );
     },
     destroyOne: async function (req, res) {
       sails.log.debug("Destroy Product....")

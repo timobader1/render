@@ -60,7 +60,7 @@
                         <a class="btn btn-outline-light btn-lg " href="/products/new">Produkt hinzufügen</a>
                     </div>
                     <div class="item-content">
-                        <table class="table table-bordered border-black table-striped">
+                        <table class="table table-bordered border-black table table-striped">
                             <thead class="table-active">
                                 <th scope="col">Name</th>
                                 <th scope="col">Modell</th>
@@ -75,13 +75,13 @@
                                             <%= product.titel %>
                                         </td>
                                         <td>
-                                            <%= product.carmodel %>
+                                            <%= product.carmodel.name %>
                                         </td>
                                         <td>
-                                            <%= product.category %>
+                                            <%= product.category.name %>
                                         </td>
                                         <td>
-                                            Preis
+                                            <%= product.preis %>
                                         </td>
                                         <td>
                                             <a class="button text-black" href="/products/<%= product.id %>">anzeigen</a>
