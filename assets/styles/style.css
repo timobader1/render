@@ -1,28 +1,42 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    background-color: #303030;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
 main {
     text-align: center;
 }
 
-.ueberschrift{
-    
-  max-width: 100%;
-    text-align: center;
-}
-
-main, body{
-    height:100%;
+footer {
     background-color: #303030;
-    padding: 0;
-    margin: 0;
+    border-top: solid;
+    border-color: white;
+    margin: auto;
 }
 
-html{
-    min-height: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-p, h1, h2{
+h1,
+h2,
+p {
     color: white;
+}
+
+h1 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+h2 {
+    padding: 2rem;
 }
 
 p {
@@ -30,65 +44,43 @@ p {
     margin-bottom: 1rem;
 }
 
-h1 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-#ueberschrift{
-    color: black;
-}
-footer{
-    border-top: solid;
-    border-color: white;
-    margin: auto;
-    
-}
-
 .btn {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
-#imgButton {
-    margin: 0;
+.col {
+    padding: 0;
 }
 
-header{
-    
-    position: sticky;
-    top: 0;
-}
-.container-fluid{
-    overflow: hidden;
-}
-
-#firstChapter {
-    border-bottom: solid;
-    border-color: white;
-    padding: 2rem;
-}
-
-#secondChapter {
-    padding: 2rem;
-}
-
-#table1, #table2, #table3 {
+#table1,
+#table2,
+#table3 {
     gap: 5;
 }
 
-#table1 .row, #table2 .row, #table3 .row {
-    margin: 1rem;
+#table1 .row,
+#table2 .row,
+#table3 .row {
     margin-top: 0;
 }
 
-#table1 .col, #table2 .col, #table3 .col {
-    margin: 2rem;
+#table1 .col,
+#table2 .col,
+#table3 .col {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-@media(max-width: 768px){
-    .bg-image{
-        background-size: auto;}
+#table1 p,
+#table2 p,
+#table3 p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+@media(max-width: 768px) {
+    .bg-image {
+        background-size: auto;
     }
+}
