@@ -53,19 +53,19 @@
             <main>
                 <div class="container">
                     <h2>Bearbeiten</h2>
-                    <form action="/product/<%=products.id%>/update" method="post">
+                    <form action="/products/<%=product.id%>/update" method="post">
                         <div>
                             <div class="form-group">
                                 <label class="col-form-label-lg text-white">Titel</label>
-                                <input type="text" class="form-control" maxlength="50" value="<%= products.titel %>" name="titel">
+                                <input type="text" class="form-control" maxlength="50" value="<%= product.titel %>" name="titel">
                             </div>
                             <div class="form-group">
                                 <label class="col-form-label-lg text-white">Beschreibung</label>
-                                <input type="text" class="form-control" maxlength="200" value="<%= products.beschreibung %>" name="beschreibung">
+                                <input type="text" class="form-control" maxlength="200" value="<%= product.beschreibung %>" name="beschreibung">
                             </div>
                             <div class="form-group">
                                 <label class="col-form-label-lg text-white">Bild</label>
-                                <input type="text" class="form-control" maxlength="50" value="<%= products.bild %>" name="bild">
+                                <input type="text" class="form-control" maxlength="50" value="<%= product.bild %>" name="bild">
                             </div>
                         </div>
                         

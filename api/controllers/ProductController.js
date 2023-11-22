@@ -27,8 +27,8 @@ module.exports = {
       sails.log.debug("Edit single Product....")
       let categories = await Category.find();
       let carmodels = await CarModel.find();
-      let products = await Product.findOne({ id: req.params.id }).populate('category');
-      res.view('pages/Products/edit', { products, categories, carmodels});
+      let product = await Product.findOne({ id: req.params.id }).populate('category');
+      res.view('pages/Products/edit', { product, categories, carmodels});
     },
     updateOne: async function (req, res) {
       sails.log.debug("Update single Product....")
