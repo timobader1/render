@@ -17,18 +17,22 @@ module.exports = {
         },
       })
       if (req.query.cat && req.query.cat.length > 0) {sails.log.debug("2 List all Products....")
-        products = await Product.find({
-          category: {
-            'contains': req.query.cat
-          },
-        })
-      }
-    } else if (req.query.cat && req.query.cat.length > 0) {sails.log.debug("3 List all Products....")
       products = await Product.find({
-        category: {
-          'contains': req.query.cat
+        titel: {
+          'contains': req.query.q
+        },
+        preis: {
+          '<=': req.query.cat
         },
       })
+      }
+    } else if (req.query.cat && req.query.cat.length > 0) {sails.log.debug("3 List all Products....")
+    products = await Product.find({
+      preis: {
+        '<=': req.query.cat
+      },
+    })
+      
     } else {
       products = await Product.find().populate("category");
 
