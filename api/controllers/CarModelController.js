@@ -9,7 +9,7 @@ module.exports = {
   
     find: async function (req, res) {
       sails.log.debug("List Model....")
-      carmodels = await CarModel.find();
+      carmodels = await CarModel.find().populate("carbrand");
       res.view('pages/CarModel/index', { carmodels });
     },
   

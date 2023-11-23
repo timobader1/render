@@ -34,7 +34,7 @@ module.exports = {
     })
       
     } else {
-      products = await Product.find().populate("category");
+      products = await Product.find().populate("category").populate("carmodel");
 
     }
     res.view('pages/products/index', { products });
@@ -64,7 +64,7 @@ module.exports = {
   },
   findOne: async function (req, res) {
     sails.log.debug("List single Product....")
-    let product = await Product.findOne({ id: req.params.id });
+    let product = await Product.findOne({ id: req.params.id }).populate("category").populate("carmodel");
     res.view('pages/Products/show', { product });
   },
 };
