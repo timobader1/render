@@ -64,24 +64,25 @@
                     <label class="col-form-label-lg">Bild</label>
                     <input type="text" class="form-control" maxlength="50" name="bild">
                 </div>
+                <div class="form-group">
+                    <label class="col-form-label-lg">Modell</label>
+                    <select class="form-control" name="carmodel">
+                    <% carmodels.forEach(function(carmodel){ %>
+                    <option value="<%= carmodel.id %>"><%= carmodel.name %></option>
+                    <% }); %>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label-lg">Kategorie</label>
+                    <select class="form-control" name="category">
+                    <% categories.forEach(function(category){ %>
+                        <option value="<%= category.id %>"><%= category.name %></option>
+                    <% }); %>
+                    </select>
+                </div>
             </div>
             
-            <div class="form-group">
-                <label class="col-form-label-lg">Modell</label>
-                 <select class="form-control" name="carmodel">
-                <% carmodels.forEach(function(carmodel){ %>
-                    <option value="<%= carmodel.id %>"><%= carmodel.name %></option>
-                <% }); %>
-                </select>
-            </div>
-            <div class="form-group">
-                <label class="col-form-label-lg">Kategorie</label>
-                 <select class="form-control" name="category">
-                <% categories.forEach(function(category){ %>
-                    <option value="<%= category.id %>"><%= category.name %></option>
-                <% }); %>
-                </select>
-            </div>
+            
             <button type="submit" class="btn btn-primary mt-4">Hinzufügen</button>
         </form>
     </div>

@@ -21,7 +21,8 @@ module.exports = {
     new: async function (req, res) {
       let carbrands = await CarBrand.find();
       let categories = await Category.find();
-      res.view('pages/Products/new', { carbrands, categories });
+      let carmodels = await CarModel.find();
+      res.view('pages/Products/new', { carbrands, categories, carmodels });
     },
    
   };
