@@ -1,33 +1,6 @@
 const Sails = require("sails/lib/app/Sails");
 
 module.exports = {
-<<<<<<< HEAD
-    create: async function (req, res) {
-      sails.log.debug("Create new Product....")
-      let product = await Product.create(req.allParams());
-      res.redirect('/product');
-    },
-  
-    find: async function (req, res) {
-      sails.log.debug("List Products....")
-      products = await Product.find();
-      res.view('pages/Products/index', { products });
-    },
-  
-    destroyOne: async function (req, res) {
-      sails.log.debug("Destroy Product....")
-      await Product.destroyOne({ id: req.params.id });
-      res.redirect('/products');
-    },
-    new: async function (req, res) {
-      let carbrands = await CarBrand.find();
-      let categories = await Category.find();
-      let carmodels = await CarModel.find();
-      res.view('pages/Products/new', { carbrands, categories, carmodels });
-    },
-   
-  };
-=======
   create: async function (req, res) {
     sails.log.debug("Create new Product....")
     let product = await Product.create(req.allParams());
@@ -95,4 +68,3 @@ module.exports = {
     res.view('pages/Products/show', { product });
   },
 };
->>>>>>> 8c09a170e99e24ac36eb07cd8e5d121d86a8d96c
