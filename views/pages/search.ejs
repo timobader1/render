@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TurboParts24</title>
+    <title>TurboParts24 Suche</title>
 </head>
 
 <body class="container-fluid vh-100 p-0">
@@ -31,7 +31,7 @@
                                         <a class="nav-link" href="/Start">Start</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/Suche">Suche</a>
+                                        <a class="nav-link active" aria-current="page" href="/Suche">Suche</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="/Admin">Admin</a>
@@ -50,8 +50,19 @@
             </header>
         </div>
         <div class="col-12 flex-grow-1 p-2">
-            <main>
-
+            <main class="h-100 ">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 ">
+                            <form action="/products">
+                                <label class="text-white">Suche</label>
+                                <input placeholder="Artikel" type="text" value="" size="40" name="q">
+                                <input placeholder="Max-Preis" type="text" value="" size="10" name="cat">
+                                <button class="btn btn-light btn-lg" type="submit">Suche</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
         <div class="col-12 d-flex flex-column p-0">
