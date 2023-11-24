@@ -1,131 +1,42 @@
-<!DOCTYPE html>
-<html lang="de">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 text-black">
+            <div class="px-5 ms-xl-4">
+                <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+                <span class="h1 fw-bold mb-0">Logo</span>
+            </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TurboParts24 Anmelden</title>
-</head>
+            <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
 
-<body class="container-fluid vh-100 p-0">
-    <div class="row flex-column h-100 m-0">
-        <div class="col-12 d-flex flex-column p-0">
-            <header>
-                <nav class="navbar navbar-expand-lg w-100 nav-fill navbar-light" style=" background-color: white;">
+                <form style="width: 23rem;">
 
-                    <div class="container-fluid">
+                    <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
 
-                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                            aria-labelledby="offcanvasNavbarLabel">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menü</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="offcanvas-body">
-                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="/Start">Start</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="/Suche">Suche</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="/Admin">Admin</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Über uns</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="/Anmelden">Anmelden</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="form-outline mb-4">
+                        <input type="email" id="form2Example18" class="form-control form-control-lg" />
+                        <label class="form-label" for="form2Example18">Email address</label>
                     </div>
-                </nav>
-            </header>
+
+                    <div class="form-outline mb-4">
+                        <input type="password" id="form2Example28" class="form-control form-control-lg" />
+                        <label class="form-label" for="form2Example28">Password</label>
+                    </div>
+
+                    <div class="pt-1 mb-4">
+                        <button class="btn btn-info btn-lg btn-block" type="button">Login</button>
+                    </div>
+
+                    <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot
+                            password?</a></p>
+                    <p>Don't have an account? <a href="#!" class="link-info">Register here</a></p>
+
+                </form>
+
+            </div>
+
         </div>
-        <div class="col-12 flex-grow-1 p-2">
-            <main>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6 text-black">
-                            <div class="px-5 ms-xl-4">
-                                <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
-                                <span class="h1 fw-bold mb-0">Logo</span>
-                            </div>
-
-                            <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
-
-                                <form style="width: 23rem;">
-
-                                    <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
-
-                                    <div class="form-outline mb-4">
-                                        <input type="email" id="form2Example18" class="form-control form-control-lg" />
-                                        <label class="form-label" for="form2Example18">Email address</label>
-                                    </div>
-
-                                    <div class="form-outline mb-4">
-                                        <input type="password" id="form2Example28"
-                                            class="form-control form-control-lg" />
-                                        <label class="form-label" for="form2Example28">Password</label>
-                                    </div>
-
-                                    <div class="pt-1 mb-4">
-                                        <button class="btn btn-info btn-lg btn-block" type="button">Login</button>
-                                    </div>
-
-                                    <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot
-                                            password?</a></p>
-                                    <p>Don't have an account? <a href="#!" class="link-info">Register here</a></p>
-
-                                </form>
-
-                            </div>
-
-                        </div>
-                        <div class="col-sm-6 px-0 d-none d-sm-block">
-                            <!--Space for Image-->
-                        </div> 
-                    </div>
-                </div>
-            </main>
-        </div>
-        <div class="col-12 d-flex flex-column p-0">
-            <footer class="container-fluid">
-                <div class="row">
-                    <div class="col d-flex justify-content-center">
-                        <input type="image" src="http://localhost:1337/images/st-Instagram 1.svg" alt=""
-                            class="btTxt submit" />
-                    </div>
-                    <div class="col d-flex justify-content-center">
-
-                        <input type="image" src="http://localhost:1337/images/st-youtube 1.svg" alt="youtube"
-                            class="btTxt submit" />
-
-                    </div>
-                    <div class="col d-flex justify-content-center">
-
-                        <input type="image" src="http://localhost:1337/images/st-twitter 1.svg" alt="twitter"
-                            class="btTxt submit" />
-
-                    </div>
-                    <div class="col d-flex justify-content-center">
-
-                        <input type="image" src="http://localhost:1337/images/svg-logistics 1.svg" alt="logistics"
-                            class="btTxt submit" />
-                    </div>
-                </div>
-            </footer>
+        <div class="col-sm-6 px-0 d-none d-sm-block">
+            <!--Space for Image-->
         </div>
     </div>
-</body>
-
-</html>
+</div>
