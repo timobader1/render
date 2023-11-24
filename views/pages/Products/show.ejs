@@ -20,6 +20,13 @@
                         <li class="list-group-item p-4">
                             <b>Preis</b>
                         </li>
+                        <li class="list-group-item p-4">
+                            <b>Modell</b>
+                        </li>
+                        <li class="list-group-item p-4">
+                            <b>Kategorie</b>
+                        </li>
+
                     </ul>
                 </div>
                 <div class="col-9 p-0">
@@ -35,6 +42,12 @@
                         </li>
                         <li class="list-group-item p-4">
                             <%= product.preis %>
+                        </li>
+                        <li class="list-group-item p-4">
+                            <%= product.carmodel.name %>
+                        </li>
+                        <li class="list-group-item p-4">
+                            <%= product.category.name %>
                         </li>
                     </ul>
                 </div>
