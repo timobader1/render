@@ -1,319 +1,230 @@
-<!DOCTYPE html>
-<html lang="de">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TurboParts24</title>
-</head>
-
-
-<body class="container-fluid h-100  p-0">
-    <div class="row flex-column h-100 m-0">
-        <div class="col-12 d-flex flex-column position-sticky top-0 p-0">
-            <header>
-                <nav class="navbar navbar-expand-lg w-100 nav-fill navbar-light" style=" background-color: white;">
-
-                    <div class="container-fluid">
-
-                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                            aria-labelledby="offcanvasNavbarLabel">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menü</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="offcanvas-body">
-                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="/Start">Start</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="/Suche">Suche</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="/Admin">Admin</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Über uns</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="/Anmelden">Anmelden</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-        </div>
-        <div class="col-12 flex-grow-1 p-0">
-            <main>
-                <div class="container-fluid p-0">
-                    <div class="bg-image" style="background-image: url('http://localhost:1337/images/background.jpg');
+<div class="container-fluid p-0">
+    <div class="bg-image" style="background-image: url('http://localhost:1337/images/background.jpg');
                         background-size: cover; height: 96vh;">
-                        <div class="row no-gutters" style="height: 10vh" ;></div>
-                        <div class="row no-gutters" style="height: 30vh" ;>
-                            <div class="col pr-0">
-                                <h1 class="text-black">Willkommen bei <br>TurboParts24</h1>
+        <div class="row no-gutters" style="height: 10vh" ;></div>
+        <div class="row no-gutters" style="height: 30vh" ;>
+            <div class="col pr-0">
+                <h1 class="text-black">Willkommen bei <br>TurboParts24</h1>
 
-                            </div>
+            </div>
 
-                        </div>
-                        <div class="row no-gutters">
-                            <div class="col" style="height: 40vh" ;>
-                                <button type="button" class="btn btn-outline-dark btn-lg m-0">Jetzt Teile
-                                    finden</button>
-                            </div>
-                        </div>
-                        <div class="row no-gutters">
-                            <div class="col">
-                                <input type="image" src="http://localhost:1337/images/pfeil unten.png" alt="pfeil"
-                                    class="btTxt submit" width="100rem" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center align-items-center border-bottom border-top-0 border-3 g-2">
-                        <div class="col">
-                            <h1 class="border border-3 rounded-pill bg-black">Willkommen bei TurboParts24 - Ihre erste
-                                Anlaufstelle für qualitativ hochwertige
-                                Autoteile
-                                und
-                                Zubehör!</h1>
-                            <p>Herzlich willkommen bei TurboParts24, Ihrem vertrauenswürdigen Ansprechpartner für
-                                erstklassige
-                                Autoteile und Zubehör. Wir bieten eine umfassende Auswahl hochwertiger Autoteile und
-                                Komponenten
-                                für Fahrzeuge aller Marken und Modelle. Unser vorrangiges Ziel ist es, Ihre
-                                Anforderungen im
-                                Bereich der Automobilreparatur und -optimierung zu erfüllen, indem wir qualitativ
-                                hochwertige
-                                Produkte und einen erstklassigen Service bieten.</p>
-
-
-                            <h1 class="border border-3 rounded-pill bg-black">Warum TurboParts24?</h1>
-                            <div class="container-fluid" id="table1">
-                                <div class="row justify-content-center align-items-center">
-                                    <div class="col">
-                                        <h2 class="border border-1 border-black rounded-pill">Qualität und
-                                            Zuverlässigkeit</h2>
-                                        <p>Bei TurboParts24 setzen wir auf erstklassige Qualitätsstandards. Unsere
-                                            Autoteile
-                                            werden
-                                            sorgfältig ausgewählt, um sicherzustellen, dass sie den höchsten Standards
-                                            entsprechen. Sie
-                                            können sich darauf verlassen, dass Sie bei uns langlebige und zuverlässige
-                                            Produkte
-                                            erhalten.
-                                        </p>
-                                    </div>
-                                    <div class="col ">
-                                        <h2 class="border border-1 border-black rounded-pill">Umfangreiches Sortiment
-                                        </h2>
-                                        <p>Unser Lager umfasst eine breite Auswahl an Autoteilen, angefangen bei Bremsen
-                                            und
-                                            Motorölen bis
-                                            hin zu Beleuchtung und Elektronik. Egal, ob Sie Ihr Fahrzeug reparieren,
-                                            warten oder
-                                            aufrüsten
-                                            möchten - bei uns werden Sie fündig.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-center align-items-center">
-                                    <div class="col">
-                                        <h2 class="border border-1 border-black rounded-pill">Kundenzufriedenheit</h2>
-                                        <p>Ihre Zufriedenheit hat bei uns oberste Priorität. Unser engagiertes Team
-                                            steht Ihnen
-                                            mit
-                                            fachkundiger Beratung und Unterstützung zur Seite. Wir sind stets bestrebt,
-                                            Ihre
-                                            Erwartungen zu
-                                            übertreffen.</p>
-                                    </div>
-                                    <div class="col">
-                                        <h2 class="border border-1 border-black rounded-pill">Schneller Versand</h2>
-                                        <p>Wir wissen, dass Zeit ein entscheidender Faktor ist, wenn es um
-                                            Autoreparaturen geht.
-                                            Daher
-                                            bieten wir schnellen Versand, damit Sie Ihre Teile so schnell wie möglich
-                                            erhalten.
-                                        </p>
-                                    </div>
-                                    <div class="col">
-                                        <h2 class="border border-1 border-black rounded-pill">Wettbewerbsfähige Preise
-                                        </h2>
-                                        <p>Bei TurboParts24 bieten wir wettbewerbsfähige Preise, ohne Kompromisse bei
-                                            der
-                                            Qualität
-                                            einzugehen. Wir möchten, dass Autoteile erschwinglich sind, ohne die
-                                            Sicherheit und
-                                            Leistung zu
-                                            beeinträchtigen.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <h1 class="border border-3 rounded-pill bg-black">Ihre Autoteile-Experten</h1>
-                            <p>Unsere langjährige Erfahrung im Bereich Autoteile und unser Engagement für höchste
-                                Standards
-                                machen uns zu Ihren vertrauenswürdigen Autoteile-Experten. Wir freuen uns darauf, Ihnen
-                                bei all
-                                Ihren Autoteil-Bedürfnissen zu helfen und sicherzustellen, dass Ihr Fahrzeug in
-                                erstklassigem
-                                Zustand bleibt. Erkunden Sie unsere Website, um unser Sortiment zu entdecken, oder
-                                kontaktieren
-                                Sie unser freundliches Team für weitere Informationen. Bei TurboParts24 sind wir bereit,
-                                Ihnen
-                                die besten Autoteile und den besten Service zu bieten.</p>
-                            <button type="button" class="btn btn-light btn-lg ">Jetzt registrieren</button>
-                        </div>
-                    </div>
-
-                    <div class="row justify-content-center align-items-center g-2">
-                        <div class="col">
-                            <h1 class="border border-3 rounded-pill bg-black">Steigern Sie Ihren Erfolg - Verkaufen Sie
-                                Autoteile auf TurboParts24!</h1>
-                            <p>Möchten Sie Ihre Autoteile einer breiten Zielgruppe vorstellen und Ihr Geschäft auf das
-                                nächste
-                                Level bringen? Dann sind Sie bei TurboParts24 an der richtigen Adresse! Wir bieten Ihnen
-                                die
-                                Möglichkeit, Ihre Autoteile und Komponenten über unsere Plattform zu verkaufen, um Ihre
-                                Sichtbarkeit zu erhöhen und neue Kunden zu gewinnen.</p>
-
-                            <h1 class="border border-3 rounded-pill bg-black">Warum bei uns verkaufen?</h1>
-
-                            <div class="container-fluid" id="table2">
-                                <div class="row justify-content-center align-items-center">
-                                    <div class="col">
-                                        <h2 class="border border-1 border-black rounded-pill">Reichweite und
-                                            Sichtbarkeit</h2>
-                                        <p>Bei TurboParts24 profitieren Sie von unserer etablierten Präsenz in der
-                                            Automobilbranche.
-                                            Unsere
-                                            Website zieht regelmäßig Autoliebhaber und Autobesitzer an, die auf der
-                                            Suche nach
-                                            hochwertigen
-                                            Autoteilen sind.</p>
-                                    </div>
-                                    <div class="col ">
-                                        <h2 class="border border-1 border-black rounded-pill">Einfacher Verkaufsprozess
-                                        </h2>
-                                        <p>Unser unkomplizierter Verkaufsprozess ermöglicht es Ihnen, Ihre Produkte
-                                            schnell und
-                                            effizient
-                                            anzubieten. Wir unterstützen Sie bei jedem Schritt, von der Produktliste bis
-                                            zur
-                                            Abwicklung
-                                            der
-                                            Verkäufe.</p>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-center align-items-center">
-                                    <div class="col">
-                                        <h2 class="border border-1 border-black rounded-pill">Sicherheit und Vertrauen
-                                        </h2>
-                                        <p>Wir legen Wert auf Vertrauen und Sicherheit. Unsere Plattform bietet sichere
-                                            Zahlungsoptionen
-                                            und
-                                            Schutz vor Betrug, sodass Sie sich auf Ihr Geschäft konzentrieren können.
-                                        </p>
-                                    </div>
-                                    <div class="col">
-                                        <h2 class="border border-1 border-black rounded-pill">Kundenservice</h2>
-                                        <p>Unser engagiertes Team steht Ihnen bei Fragen und Anliegen zur Seite, um
-                                            sicherzustellen,
-                                            dass
-                                            Ihr Verkaufserlebnis reibungslos verläuft.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <h1 class="border border-3 rounded-pill bg-black">So funktioniert es</h1>
-
-                            <div class="container-fluid" id="table3">
-                                <div class="row justify-content-center align-items-center">
-                                    <div class="col">
-                                        <h2 class="border border-1 border-black rounded-pill">Registrieren Sie sich</h2>
-                                        <p>Erstellen Sie ein Verkäuferkonto auf TurboParts24.</p>
-                                    </div>
-                                    <div class="col ">
-                                        <h2 class="border border-1 border-black rounded-pill">Listen Sie Ihre Produkte
-                                        </h2>
-                                        <p>Erfassen Sie Ihre Autoteile und geben Sie alle relevanten Informationen an.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-center align-items-center">
-                                    <div class="col">
-                                        <h2 class="border border-1 border-black rounded-pill">Verkaufen Sie erfolgreich
-                                        </h2>
-                                        <p>Sobald Ihre Produkte online sind, können Kunden sie kaufen. Sie erhalten
-                                            Benachrichtigungen
-                                            über
-                                            Bestellungen und können den Versand veranlassen.</p>
-                                    </div>
-                                    <div class="col">
-                                        <h2 class="border border-1 border-black rounded-pill">Profitieren Sie von
-                                            unserer Plattform</h2>
-                                        <p>Steigern Sie Ihre Umsätze und erweitern Sie Ihre Kundenbasis, während wir
-                                            Ihnen dabei
-                                            helfen,
-                                            erfolgreich zu sein.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <h1 class="border border-3 rounded-pill bg-black">Machen Sie den nächsten Schritt</h1>
-                            <p>Nutzen Sie die Chance, Ihr Autoteilgeschäft auf TurboParts24 zu erweitern. Treten Sie
-                                noch
-                                heute
-                                unserem Netzwerk von Verkäufern bei und profitieren Sie von den Vorteilen einer breiten
-                                Reichweite und eines effizienten Verkaufsprozesses. Wir sind stolz darauf, Verkäufern
-                                wie
-                                Ihnen
-                                die Möglichkeit zu bieten, Ihr Geschäft aufzubauen und zu expandieren. Wir freuen uns
-                                darauf,
-                                gemeinsam mit Ihnen erfolgreich zu sein!</p>
-                            <button type="button" class="btn btn-light btn-lg " ;>Jetzt registrieren</button>
-                        </div>
-                    </div>
-                </div>
-            </main>
         </div>
-        <div class="col-12 d-flex flex-column p-0">
-            <footer class="container-fluid">
-                <div class="row">
-                    <div class="col d-flex justify-content-center">
-                        <input type="image" src="http://localhost:1337/images/st-Instagram 1.svg" alt=""
-                            class="btTxt submit" />
-                    </div>
-                    <div class="col d-flex justify-content-center">
-
-                        <input type="image" src="http://localhost:1337/images/st-youtube 1.svg" alt="youtube"
-                            class="btTxt submit" />
-
-                    </div>
-                    <div class="col d-flex justify-content-center">
-
-                        <input type="image" src="http://localhost:1337/images/st-twitter 1.svg" alt="twitter"
-                            class="btTxt submit" />
-
-                    </div>
-                    <div class="col d-flex justify-content-center">
-
-                        <input type="image" src="http://localhost:1337/images/svg-logistics 1.svg" alt="logistics"
-                            class="btTxt submit" />
-                    </div>
-                </div>
-            </footer>
+        <div class="row no-gutters">
+            <div class="col" style="height: 40vh" ;>
+                <button type="button" class="btn btn-outline-dark btn-lg m-0">Jetzt Teile
+                    finden</button>
+            </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col">
+                <input type="image" src="http://localhost:1337/images/pfeil unten.png" alt="pfeil" class="btTxt submit"
+                    width="100rem" />
+            </div>
         </div>
     </div>
-</body>
+    <div class="row justify-content-center align-items-center border-bottom border-top-0 border-3 g-2">
+        <div class="col">
+            <h1 class="border border-3 rounded-pill bg-black">Willkommen bei TurboParts24 - Ihre erste
+                Anlaufstelle für qualitativ hochwertige
+                Autoteile
+                und
+                Zubehör!</h1>
+            <p>Herzlich willkommen bei TurboParts24, Ihrem vertrauenswürdigen Ansprechpartner für
+                erstklassige
+                Autoteile und Zubehör. Wir bieten eine umfassende Auswahl hochwertiger Autoteile und
+                Komponenten
+                für Fahrzeuge aller Marken und Modelle. Unser vorrangiges Ziel ist es, Ihre
+                Anforderungen im
+                Bereich der Automobilreparatur und -optimierung zu erfüllen, indem wir qualitativ
+                hochwertige
+                Produkte und einen erstklassigen Service bieten.</p>
 
-</html>
+
+            <h1 class="border border-3 rounded-pill bg-black">Warum TurboParts24?</h1>
+            <div class="container-fluid" id="table1">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col">
+                        <h2 class="border border-1 border-black rounded-pill">Qualität und
+                            Zuverlässigkeit</h2>
+                        <p>Bei TurboParts24 setzen wir auf erstklassige Qualitätsstandards. Unsere
+                            Autoteile
+                            werden
+                            sorgfältig ausgewählt, um sicherzustellen, dass sie den höchsten Standards
+                            entsprechen. Sie
+                            können sich darauf verlassen, dass Sie bei uns langlebige und zuverlässige
+                            Produkte
+                            erhalten.
+                        </p>
+                    </div>
+                    <div class="col ">
+                        <h2 class="border border-1 border-black rounded-pill">Umfangreiches Sortiment
+                        </h2>
+                        <p>Unser Lager umfasst eine breite Auswahl an Autoteilen, angefangen bei Bremsen
+                            und
+                            Motorölen bis
+                            hin zu Beleuchtung und Elektronik. Egal, ob Sie Ihr Fahrzeug reparieren,
+                            warten oder
+                            aufrüsten
+                            möchten - bei uns werden Sie fündig.
+                        </p>
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col">
+                        <h2 class="border border-1 border-black rounded-pill">Kundenzufriedenheit</h2>
+                        <p>Ihre Zufriedenheit hat bei uns oberste Priorität. Unser engagiertes Team
+                            steht Ihnen
+                            mit
+                            fachkundiger Beratung und Unterstützung zur Seite. Wir sind stets bestrebt,
+                            Ihre
+                            Erwartungen zu
+                            übertreffen.</p>
+                    </div>
+                    <div class="col">
+                        <h2 class="border border-1 border-black rounded-pill">Schneller Versand</h2>
+                        <p>Wir wissen, dass Zeit ein entscheidender Faktor ist, wenn es um
+                            Autoreparaturen geht.
+                            Daher
+                            bieten wir schnellen Versand, damit Sie Ihre Teile so schnell wie möglich
+                            erhalten.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <h2 class="border border-1 border-black rounded-pill">Wettbewerbsfähige Preise
+                        </h2>
+                        <p>Bei TurboParts24 bieten wir wettbewerbsfähige Preise, ohne Kompromisse bei
+                            der
+                            Qualität
+                            einzugehen. Wir möchten, dass Autoteile erschwinglich sind, ohne die
+                            Sicherheit und
+                            Leistung zu
+                            beeinträchtigen.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="border border-3 rounded-pill bg-black">Ihre Autoteile-Experten</h1>
+            <p>Unsere langjährige Erfahrung im Bereich Autoteile und unser Engagement für höchste
+                Standards
+                machen uns zu Ihren vertrauenswürdigen Autoteile-Experten. Wir freuen uns darauf, Ihnen
+                bei all
+                Ihren Autoteil-Bedürfnissen zu helfen und sicherzustellen, dass Ihr Fahrzeug in
+                erstklassigem
+                Zustand bleibt. Erkunden Sie unsere Website, um unser Sortiment zu entdecken, oder
+                kontaktieren
+                Sie unser freundliches Team für weitere Informationen. Bei TurboParts24 sind wir bereit,
+                Ihnen
+                die besten Autoteile und den besten Service zu bieten.</p>
+            <button type="button" class="btn btn-light btn-lg ">Jetzt registrieren</button>
+        </div>
+    </div>
+
+    <div class="row justify-content-center align-items-center g-2">
+        <div class="col">
+            <h1 class="border border-3 rounded-pill bg-black">Steigern Sie Ihren Erfolg - Verkaufen Sie
+                Autoteile auf TurboParts24!</h1>
+            <p>Möchten Sie Ihre Autoteile einer breiten Zielgruppe vorstellen und Ihr Geschäft auf das
+                nächste
+                Level bringen? Dann sind Sie bei TurboParts24 an der richtigen Adresse! Wir bieten Ihnen
+                die
+                Möglichkeit, Ihre Autoteile und Komponenten über unsere Plattform zu verkaufen, um Ihre
+                Sichtbarkeit zu erhöhen und neue Kunden zu gewinnen.</p>
+
+            <h1 class="border border-3 rounded-pill bg-black">Warum bei uns verkaufen?</h1>
+
+            <div class="container-fluid" id="table2">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col">
+                        <h2 class="border border-1 border-black rounded-pill">Reichweite und
+                            Sichtbarkeit</h2>
+                        <p>Bei TurboParts24 profitieren Sie von unserer etablierten Präsenz in der
+                            Automobilbranche.
+                            Unsere
+                            Website zieht regelmäßig Autoliebhaber und Autobesitzer an, die auf der
+                            Suche nach
+                            hochwertigen
+                            Autoteilen sind.</p>
+                    </div>
+                    <div class="col ">
+                        <h2 class="border border-1 border-black rounded-pill">Einfacher Verkaufsprozess
+                        </h2>
+                        <p>Unser unkomplizierter Verkaufsprozess ermöglicht es Ihnen, Ihre Produkte
+                            schnell und
+                            effizient
+                            anzubieten. Wir unterstützen Sie bei jedem Schritt, von der Produktliste bis
+                            zur
+                            Abwicklung
+                            der
+                            Verkäufe.</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col">
+                        <h2 class="border border-1 border-black rounded-pill">Sicherheit und Vertrauen
+                        </h2>
+                        <p>Wir legen Wert auf Vertrauen und Sicherheit. Unsere Plattform bietet sichere
+                            Zahlungsoptionen
+                            und
+                            Schutz vor Betrug, sodass Sie sich auf Ihr Geschäft konzentrieren können.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <h2 class="border border-1 border-black rounded-pill">Kundenservice</h2>
+                        <p>Unser engagiertes Team steht Ihnen bei Fragen und Anliegen zur Seite, um
+                            sicherzustellen,
+                            dass
+                            Ihr Verkaufserlebnis reibungslos verläuft.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="border border-3 rounded-pill bg-black">So funktioniert es</h1>
+
+            <div class="container-fluid" id="table3">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col">
+                        <h2 class="border border-1 border-black rounded-pill">Registrieren Sie sich</h2>
+                        <p>Erstellen Sie ein Verkäuferkonto auf TurboParts24.</p>
+                    </div>
+                    <div class="col ">
+                        <h2 class="border border-1 border-black rounded-pill">Listen Sie Ihre Produkte
+                        </h2>
+                        <p>Erfassen Sie Ihre Autoteile und geben Sie alle relevanten Informationen an.
+                        </p>
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col">
+                        <h2 class="border border-1 border-black rounded-pill">Verkaufen Sie erfolgreich
+                        </h2>
+                        <p>Sobald Ihre Produkte online sind, können Kunden sie kaufen. Sie erhalten
+                            Benachrichtigungen
+                            über
+                            Bestellungen und können den Versand veranlassen.</p>
+                    </div>
+                    <div class="col">
+                        <h2 class="border border-1 border-black rounded-pill">Profitieren Sie von
+                            unserer Plattform</h2>
+                        <p>Steigern Sie Ihre Umsätze und erweitern Sie Ihre Kundenbasis, während wir
+                            Ihnen dabei
+                            helfen,
+                            erfolgreich zu sein.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="border border-3 rounded-pill bg-black">Machen Sie den nächsten Schritt</h1>
+            <p>Nutzen Sie die Chance, Ihr Autoteilgeschäft auf TurboParts24 zu erweitern. Treten Sie
+                noch
+                heute
+                unserem Netzwerk von Verkäufern bei und profitieren Sie von den Vorteilen einer breiten
+                Reichweite und eines effizienten Verkaufsprozesses. Wir sind stolz darauf, Verkäufern
+                wie
+                Ihnen
+                die Möglichkeit zu bieten, Ihr Geschäft aufzubauen und zu expandieren. Wir freuen uns
+                darauf,
+                gemeinsam mit Ihnen erfolgreich zu sein!</p>
+            <button type="button" class="btn btn-light btn-lg " ;>Jetzt registrieren</button>
+        </div>
+    </div>
+</div>

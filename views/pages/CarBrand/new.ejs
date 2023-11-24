@@ -1,97 +1,11 @@
-<!doctype html>
-<html lang="de">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TurboParts24</title>
-</head>
-
-<body class="container-fluid vh-100 p-0">
-    <div class="row flex-column h-100 m-0">
-        <div class="col-12 d-flex flex-column p-0">
-            <header>
-                <nav class="navbar navbar-expand-lg w-100 nav-fill navbar-light" style=" background-color: white;">
-                    <div class="container-fluid">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                            aria-labelledby="offcanvasNavbarLabel">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menü</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="offcanvas-body">
-                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="/Start">Start</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="/Suche">Suche</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="/Admin">Admin</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Über uns</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="/Anmelden">Anmelden</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </header>
+<div class="container">
+    <form action="/carbrand" method="post">
+        <div>
+            <div class="form-group">
+                <label class="col-form-label-lg">Name</label>
+                <input type="text" class="form-control" maxlength="50" name="name">
+            </div>
         </div>
-        <div class="col-12 flex-grow-1 p-2">
-            <main>
-                <div class="container">
-                    <form action="/carbrand" method="post">
-                        <div>
-                            <div class="form-group">
-                                <label class="col-form-label-lg">Name</label>
-                                <input type="text" class="form-control" maxlength="50" name="name">
-                            </div>
-                        </div>
-                        <button type="submit" class="green-button mt-4">Hinzufügen</button>
-                    </form>
-                </div>
-            </main>
-        </div>
-        <div class="col-12 d-flex flex-column p-0">
-            <footer class="container-fluid">
-                <div class="row">
-                    <div class="col d-flex justify-content-center">
-                        <input type="image" src="http://localhost:1337/images/st-Instagram 1.svg" alt=""
-                            class="btTxt submit" />
-                    </div>
-                    <div class="col d-flex justify-content-center">
-
-                        <input type="image" src="http://localhost:1337/images/st-youtube 1.svg" alt="youtube"
-                            class="btTxt submit" />
-
-                    </div>
-                    <div class="col d-flex justify-content-center">
-
-                        <input type="image" src="http://localhost:1337/images/st-twitter 1.svg" alt="twitter"
-                            class="btTxt submit" />
-
-                    </div>
-                    <div class="col d-flex justify-content-center">
-
-                        <input type="image" src="http://localhost:1337/images/svg-logistics 1.svg" alt="logistics"
-                            class="btTxt submit" />
-                    </div>
-                </div>
-            </footer>
-        </div>
-    </div>
-</body>
-
-</html>
+        <button type="submit" class="green-button mt-4">Hinzufügen</button>
+    </form>
+</div>
