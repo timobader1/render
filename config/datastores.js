@@ -54,8 +54,7 @@ module.exports.datastores = {
     adapter: 'sails-mysql',
     host: '193.196.53.194',
     port: 33061,
-    user: 'user11_test',
-    password: 'u116116',
-    database: 'turboparts24_test'
+    user: 'user11_prod',
+    database: 'turboparts24_prod'
   },
 };
