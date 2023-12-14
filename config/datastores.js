@@ -55,7 +55,6 @@ module.exports.datastores = {
     host: '193.196.53.194',
     port: 33061,
     user: 'user11_test',
-    password: 'u116116',
     database: 'turboparts24_test'
   },
 };
