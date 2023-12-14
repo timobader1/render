@@ -37,7 +37,7 @@ module.exports = {
       products = await Product.find().populate("category").populate("carmodel");
 
     }
-    res.view('pages/products/index', { products });
+    res.view('pages/Products/index', { products });
   },
   destroyOne: async function (req, res) {
     sails.log.debug("Destroy Product....")
