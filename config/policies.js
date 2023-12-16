@@ -34,7 +34,5 @@ module.exports.policies = {
  CategoryController: {
     '*': 'is-super-admin',
   },
-  ProductController: {
-    '*': 'is-super-admin',
-  },
+ 
 };

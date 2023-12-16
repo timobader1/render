@@ -64,5 +64,5 @@ module.exports.routes = {
   'POST  /signup':                       { action: 'entrance/signup' },
   'POST  /updateProfile':                { action: 'account/update-profile' },
   'POST  /updatePassword':               { action: 'account/update-password' },
-  
+  'GET /signup':             { action: 'entrance/view-signup' },
 };

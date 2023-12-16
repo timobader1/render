@@ -11,7 +11,7 @@ module.exports = {
   
       success: {
         statusCode: 200,
-        viewTemplatePath: 'pages/admin'
+        viewTemplatePath: 'pages/Admin'
       },
   
     },
