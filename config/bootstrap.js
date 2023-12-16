@@ -26,5 +26,11 @@ module.exports.bootstrap = async function() {
   //   // etc.
   // ]);
   // ```
-
+  if (await User.count() > 0) {
+    return;
+    }
+    
+    await User.createEach([
+    { emailAddress: 'ti261bad@htwg-konstanz.de', fullName: 'Timo Bader', isSuperAdmin: true, password: await sails.helpers.passwords.hashPassword('test123') },
+    ])
 };

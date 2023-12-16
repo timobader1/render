@@ -25,8 +25,6 @@ module.exports.routes = {
   'GET /Suche': {view: 'pages/search'},
   'GET /Start': { view: 'pages/Home' },
   
-
-
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *
@@ -60,5 +58,11 @@ module.exports.routes = {
   'GET /products/:id': 'product.findOne',
   'GET /products/:id/edit': {controller:'ProductController', action: 'editOne'},
   'POST /products/:id/update': {controller:'ProductController', action: 'updateOne'},
+
+  'GET /logout':                         { action: 'account/logout' },
+  'POST  /login':                        { action: 'entrance/login' },
+  'POST  /signup':                       { action: 'entrance/signup' },
+  'POST  /updateProfile':                { action: 'account/update-profile' },
+  'POST  /updatePassword':               { action: 'account/update-password' },
   
 };
