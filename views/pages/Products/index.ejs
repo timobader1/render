@@ -30,12 +30,14 @@
                         <td>
                             <a class="button text-black" href="/products/<%= product.id %>">anzeigen</a>
                         </td>
+                        <% if(req.me.isSuperAdmin) { %>
                         <td>
                             <a class="button text-black" href="/products/<%= product.id %>/edit">bearbeiten</a>
                         </td>
                         <td>
                             <a class="button text-black" href="/products/<%= product.id %>/destroy">löschen</a>
                         </td>
+                        <% } %>
                     </tr>
                     <% }); %>
             </tbody>

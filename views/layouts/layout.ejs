@@ -69,6 +69,11 @@
                 <a class="nav-link" href="/Admin">Admin</a>
               </li>
               <% } %>
+              <% if(req.me.isSellerOrAdmin) { %>
+                <li class="nav-item">
+                  <a class="nav-link" href="/Products">Produkte</a>
+                </li>
+              <% } %>
               <li class="nav-item">
                 <a class="nav-link" href="UeberUns">Über uns</a>
               </li>
