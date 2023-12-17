@@ -24,6 +24,7 @@ module.exports.routes = {
   'GET /Admin': {action: 'view-admin'},
   'GET /Suche': {view: 'pages/search'},
   'GET /Start': { view: 'pages/Home' },
+  'GET /ÜberUns': { view: 'pages/UeberUns' },
   
   /***************************************************************************
   *                                                                          *
