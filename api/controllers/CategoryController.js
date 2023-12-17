@@ -18,4 +18,8 @@ module.exports = {
       await Category.destroyOne({ id: req.params.id });
       res.redirect('/category');
     },
+
+    new: async function (req, res) {
+      res.view('pages/Category/new', { });
+    },
   };

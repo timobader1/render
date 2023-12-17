@@ -97,7 +97,7 @@ module.exports = {
       this.req.session.userId = newUserRecord.id;
     
       if (!this.req.wantsJSON) {
-        throw {redirect: '/'};
+        throw {redirect: '/Anmelden'};
       }
     }
   

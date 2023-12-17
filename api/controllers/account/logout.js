@@ -46,7 +46,7 @@ module.exports = {
       // > Under the covers, this persists the now-logged-out session back
       // > to the underlying session store.
       if (!this.req.wantsJSON) {
-        throw {redirect: '/login'};
+        throw {redirect: '/Anmelden'};
       }
   
     }

@@ -55,6 +55,28 @@
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <!-- LOGGED-IN NAVIGATION -->
+              <% if(req.me) { %>
+              <li class="nav-item">
+                <a class="nav-link" href="/Start">Start</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Suche">Suche</a>
+              </li>
+              <!-- Added Block für Super user Navigation-->
+              <% if(req.me.isSuperAdmin) { %>
+              <li class="nav-item">
+                <a class="nav-link" href="/Admin">Admin</a>
+              </li>
+              <% } %>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Über uns</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Abmelden">Abmelden</a>
+              </li>
+              <% } else { %>
+              <!-- LOGGED-OUT NAVIGATION -->
               <li class="nav-item">
                 <a class="nav-link" href="/Start">Start</a>
               </li>
@@ -62,17 +84,12 @@
                 <a class="nav-link" href="/Suche">Suche</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/Admin">Admin</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="#">Über uns</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/Anmelden">Anmelden</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/signup">Registrieren</a>
-              </li>
+              <% } %>
             </ul>
           </div>
         </div>

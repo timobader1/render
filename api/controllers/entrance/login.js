@@ -121,7 +121,7 @@ module.exports = {
   //    }
   
       if (!this.req.wantsJSON) {
-        throw {redirect: '/welcome'};
+        throw {redirect: '/Start'};
       }
   
   

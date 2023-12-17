@@ -18,4 +18,9 @@ module.exports = {
     await CarBrand.destroyOne({ id: req.params.id });
     res.redirect('/carbrand');
   },
+
+  new: async function (req, res) {
+    /*let carbrands = await CarBrand.find();*/
+    res.view('pages/CarBrand/new', { /*carbrands*/ });
+  },
 };

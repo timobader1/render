@@ -32,5 +32,7 @@ module.exports.bootstrap = async function() {
     
     await User.createEach([
     { emailAddress: 'ti261bad@htwg-konstanz.de', fullName: 'Timo Bader', isSuperAdmin: true, password: await sails.helpers.passwords.hashPassword('test123') },
+    { emailAddress: 'pa741pel@htwg-konstanz.de', fullName: 'Patrick Peltzer', isSuperAdmin: true, password: await sails.helpers.passwords.hashPassword('test456') },
+    { emailAddress: 'benutzer@mail.de', fullName: 'Benutzer', isSuperAdmin: false, password: await sails.helpers.passwords.hashPassword('test789') },
     ])
 };
