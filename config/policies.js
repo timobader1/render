@@ -25,9 +25,6 @@ module.exports.policies = {
   'account/logout': true,
   'view-admin': 'is-super-admin',
 
-  ProductController: {
-    '*': 'is-super-admin',
-  },
   CarBrandController: {
     '*': 'is-super-admin',
   },
@@ -38,7 +35,13 @@ module.exports.policies = {
     '*': 'is-super-admin',
   },
   ProductController: {
-    '*': 'is-super-admin',
+    'create': 'is-seller',
+    'find': 'is-seller',
+    'destroyOne': 'is-super-admin',
+    'new': 'is-seller',
+    'findOne': 'is-seller',
+    'editOne': 'is-super-admin',
+    'updateOne': 'is-super-admin',
   },
  
 };

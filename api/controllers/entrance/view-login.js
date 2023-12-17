@@ -10,7 +10,7 @@ module.exports = {
     exits: {
   
       success: {
-        viewTemplatePath: 'pages/entrance/login',
+        viewTemplatePath: 'pages/Login',
       },
   
       redirect: {
