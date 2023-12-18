@@ -28,12 +28,12 @@ export default {
       <div class="container">
           <span class="h1">Produkte</span>
           <hr>
-              <div class="mt-2" v-for="product in products">
+              <div class="mt-2" v-for="product in this.products">
                   <div class="h4">{{ product.titel }}</div>
                   <div class="d-flex justify-content-between">
                       <div>
                           <span class="h6"> {{ product.preis }} &euro;</span>
-                          <span :id="meal.id" class="ml-2 btn btn-outline-primary" @click="order">In den Warenkorb</span>
+                          <span :id="product.id" class="ml-2 btn btn-outline-primary" @click="order">In den Warenkorb</span>
                       </div>
                   </div>
               </div>
