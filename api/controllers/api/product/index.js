@@ -18,7 +18,8 @@ module.exports = {
   
   
     fn: async function (inputs) {
-      return products = await Product.find();
+      sails.log.debug("List all Products....")
+      return products = await Product.find().populate("category").populate("carmodel");
   
       
   

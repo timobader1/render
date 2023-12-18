@@ -19,10 +19,10 @@ export default {
       <table class="table mt-4">
           <tr v-for="(item,index) in basket">
               <td class="menu-title">
-                  {{ item.name}}
+                  {{ item.titel}}
               </td>
               <td class="menu-price">
-                  {{ item.price}} &euro;
+                  {{ item.preis}} &euro;
               </td>
               <td class="menu-price">
                   <a class="badge badge-primary" href="/shoppingbasket/remove/{{index}}">entfernen</a>

@@ -30,9 +30,14 @@ export default {
           <hr>
               <div class="mt-2" v-for="product in this.products">
                   <div class="h4">{{ product.titel }}</div>
+                  <div class="h4">{{ product.beschreibung }}</div>
+                  <div class="h4">{{ product.bild }}</div>
+                  <div class="h4">{{ product.preis }}</div>
+                  <div class="h4">{{ product.carmodel.name }}</div>
+                  <div class="h4">{{ product.category.name }}</div>
                   <div class="d-flex justify-content-between">
                       <div>
-                          <span class="h6"> {{ product.preis }} &euro;</span>
+                          <span class="h4"> {{ product.preis }} &euro;</span>
                           <span :id="product.id" class="ml-2 btn btn-outline-primary" @click="order">In den Warenkorb</span>
                       </div>
                   </div>

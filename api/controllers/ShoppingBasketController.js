@@ -15,7 +15,7 @@ module.exports = {
     },
 
     put: async function (req, res) {
-        let meal = await Product.findOne({ id: req.params.productid });
+        let product = await Product.findOne({ id: req.params.productid });
         if (!req.session.basket) {
             req.session.basket = [];
             req.session.basket.push(product);
