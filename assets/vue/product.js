@@ -6,7 +6,6 @@ export default {
       };
     },
     created() {
-        sails.log.debug("xxxx")
       let url = new URL(origin + "/api/product");
       fetch(url)
         .then((res) => res.json())
