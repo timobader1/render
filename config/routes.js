@@ -22,7 +22,7 @@ module.exports.routes = {
   '/': { view: 'pages/Home' },
   'GET /Anmelden': { view: 'pages/Login' },
   'GET /Admin': {action: 'view-admin'},
-  'GET /Suche': {view: 'pages/search'},
+  'GET /Suche': {action: 'view-menu-shopping'},
   'GET /Start': { view: 'pages/Home' },
   'GET /UeberUns': { view: 'pages/UeberUns' },
   
@@ -60,10 +60,14 @@ module.exports.routes = {
   'GET /products/:id/edit': {controller:'ProductController', action: 'editOne'},
   'POST /products/:id/update': {controller:'ProductController', action: 'updateOne'},
 
-  'GET /Abmelden':                       { action: 'account/logout' },
-  'POST  /login':                        { action: 'entrance/login' },
-  'POST  /signup':                       { action: 'entrance/signup' },
-  'POST  /updateProfile':                { action: 'account/update-profile' },
-  'POST  /updatePassword':               { action: 'account/update-password' },
-  'GET /Registrieren':                   { action: 'entrance/view-signup' },
+  'GET   /Abmelden':                       { action: 'account/logout' },
+  'POST  /login':                          { action: 'entrance/login' },
+  'POST  /signup':                         { action: 'entrance/signup' },
+  'POST  /updateProfile':                  { action: 'account/update-profile' },
+  'POST  /updatePassword':                 { action: 'account/update-password' },
+  'GET   /Registrieren':                   { action: 'entrance/view-signup' },
+
+  'GET /shoppingbasket': 'ShoppingBasketController.show',
+  'GET /shoppingbasket/put/:productid': 'ShoppingBasketController.put',
+  'GET /shoppingbasket/remove/:productid': 'ShoppingBasketController.remove',
 };

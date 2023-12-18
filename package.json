@@ -15,7 +15,9 @@
     "sails-hook-organics": "^2.2.2",
     "sails-hook-orm": "^4.0.0",
     "sails-hook-sockets": "^2.0.0",
-    "sails-mysql": "^3.0.1"
+    "sails-mysql": "^3.0.1",
+    "vue": "^3.3.12",
+    "vuetify": "^3.4.7"
   },
   "devDependencies": {
     "eslint": "5.16.0"

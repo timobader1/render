@@ -1,0 +1,30 @@
+<div class="container">
+    <h2 class="mt-4">Ihr Einkauswagen</h2>
+
+    <% if(req.session.basket && req.session.basket.length> 0){ %>
+        <table class="table mt-4">
+            <% req.session.basket.forEach(function(product,index){ %>
+                <tr>
+                    <td class="menu-title">
+                        <%= product.titel %> <BR>
+                    </td>
+                    <td class="menu-price">
+                        <%= product.preis %> &euro;
+                    </td>
+                    <td class="menu-price">
+                        <a class="badge badge-primary" href="/shoppingbasket/remove/<%= index %>">entfernen</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </table>
+        <div class="mb-4">
+            <a class="btn btn-primary" href="/Suche">Weitere Artikel bestellen</a></li>
+            <a class="btn btn-primary">Bestellung abschliessen</a></li>
+        </div>
+    <% } else{ %>
+        <p>Der Warenkorb ist leer.</p>
+        <div class="mb-4">
+            <a class="btn btn-primary" href="/Suche">Zu den Artikeln</a></li>
+        </div>
+    <% } %>
+</div>
