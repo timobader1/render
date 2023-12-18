@@ -22,7 +22,9 @@ module.exports.policies = {
 
   // Bypass the `is-logged-in` policy for:
   'entrance/*': true,
+  'view-all-products':true,
   'account/logout': true,
+  'api/product/index':true,
   'view-admin': 'is-super-admin',
 
   CarBrandController: {
@@ -36,10 +38,10 @@ module.exports.policies = {
   },
   ProductController: {
     'create': 'is-seller-or-admin',
-    'find': 'is-seller-or-admin',
+    'find': true,
     'destroyOne': 'is-super-admin',
     'new': 'is-seller-or-admin',
-    'findOne': 'is-seller-or-admin',
+    'findOne': true,
     'editOne': 'is-super-admin',
     'updateOne': 'is-super-admin',
   },
