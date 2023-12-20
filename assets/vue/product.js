@@ -28,22 +28,41 @@ export default {
       <div class="container">
           <span class="h1">Produkte</span>
           <hr>
-              <div class="mt-2" v-for="product in this.products">
-                  <div class="h4">{{ product.titel }}</div>
-                  <div class="h4">{{ product.beschreibung }}</div>
-                  <div class="h4">{{ product.bild }}</div>
-                  <div class="h4">{{ product.preis }}</div>
-                  <div class="h4">{{ product.carmodel.name }}</div>
-                  <div class="h4">{{ product.category.name }}</div>
-                  <div class="d-flex justify-content-between">
-                      <div>
-                          <span class="h4"> {{ product.preis }} &euro;</span>
-                          <span :id="product.id" class="ml-2 btn btn-outline-primary" @click="order">In den Warenkorb</span>
-                      </div>
-                  </div>
-              </div>
-          
-          <router-link class="btn btn-primary" to="/basket">To Shopping Basked</router-link>
+          <table class="table mt-4">
+          <thead>
+          <tr>
+                <th class="text-left">Titel</th>
+                <th class="text-left">Beschreibung</th>
+           
+                <th class="text-left">Preis</th>
+                <th class="text-left">Modell</th>
+                <th class="text-left">Kategorie</th>
+                <th class="text-center">Warenkorb</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr v-for="product in this.products">
+            <td>
+            {{ product.titel }}
+            </td>
+            <td>
+            {{ product.beschreibung }}
+            </td>
+            
+            <td>
+            {{ product.preis }}
+            </td>
+            <td>
+            {{ product.carmodel.name }}
+            </td>
+             <td>
+             {{ product.category.name }}
+             </td>
+             <td>
+             <span :id="product.id" class="ml-2 btn btn-outline-primary" @click="order">Zum Warenkorb hinzufügen</span>
+             </td>
+            </tbody>
+            </table>
       </div>`,
   };
   

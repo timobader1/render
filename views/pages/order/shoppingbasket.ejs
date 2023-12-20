@@ -3,16 +3,27 @@
 
     <% if(req.session.basket && req.session.basket.length> 0){ %>
         <table class="table mt-4">
+            <tr>
+                <th>
+                  Titel  
+                </th>
+                <th>
+                    Preis  
+                  </th>
+                  <th>
+                    Entfernen  
+                  </th>
+            </tr>
             <% req.session.basket.forEach(function(product,index){ %>
                 <tr>
-                    <td class="menu-title">
+                    <td class="product-title">
                         <%= product.titel %> <BR>
                     </td>
-                    <td class="menu-price">
+                    <td class="product-price">
                         <%= product.preis %> &euro;
                     </td>
-                    <td class="menu-price">
-                        <a class="badge badge-primary" href="/shoppingbasket/remove/<%= index %>">entfernen</a>
+                    <td class="product-price">
+                        <a class="badge badge-primary bg-dark" href="/shoppingbasket/remove/<%= index %>">entfernen</a>
                     </td>
                 </tr>
             <% }) %>
