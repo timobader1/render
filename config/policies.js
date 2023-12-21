@@ -22,7 +22,6 @@ module.exports.policies = {
 
   // Bypass the `is-logged-in` policy for:
   'entrance/*': true,
-  'view-all-products':true,
   'account/logout': true,
   'api/product/index':true,
   'view-admin': 'is-super-admin',
