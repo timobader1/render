@@ -1,0 +1,42 @@
+<div id="signup">
+    <div class="container-fluid pt-5 pb-5">
+      <h1 class="text-center">Jetzt Registrieren</h1>
+      <div style="max-width: 450px;" class="mx-auto" >
+        <p class="text-center">Los geht's! Werde jetzt kostenlos Mitglied.</p>
+        <hr/>
+        <form class="text-white" action="signup" method="POST">
+          <div class="form-group">
+            <label for="full-name">Vollständiger Name</label>
+            <input class="form-control" id="full-name" name="fullName" type="text"  placeholder="Max Mustermann" autocomplete="name" focus-first>
+            <div class="invalid-feedback">Bitte gebe deinen vollständigen Namen ein.</div>
+          </div>
+          <div class="form-group">
+            <label for="email-address">Email Adresse</label>
+            <input class="form-control" id="emaila-address" name="emailAddress" type="email"  placeholder="maxmuster@beispiel.de" autocomplete="email">
+            <div class="invalid-feedback">Bitte gebe eine valide Email Adresse ein.</div>
+          </div>
+          <div class="form-group">
+            <label for="password">Passwort</label>
+            <input class="form-control" id="password" name="password" type="password"  placeholder="••••••••" autocomplete="new-password">
+            <div class="invalid-feedback">Bitte gebe ein Passwort ein.</div>
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Passwort bestätigen</label>
+            <input class="form-control" id="confirm-password" name="confirmPassword" type="password"  placeholder="••••••••" autocomplete="new-password">
+            <div class="invalid-feedback">Deine Passwort Bestätigung stimmt nicht mit deinem Passwort überein.</div>
+          </div>
+          <div class="form-group form-check mt-2">
+            <input class="form-check-input" id="terms-agreement" name="termsAgreement" type="checkbox" v-model="formData.agreed">
+            <label for="terms-agreement" class="form-check-label">Ich habe die <a target="_blank" href="/terms">terms of service</a> bereits gelesen und bin mit diesen einverstanden.</label>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-light btn-lg my-2 text-black">Registrieren</button>
+          </div>
+          <span>Es gibt bereits einen Account mit dieser Email Adresse?<br>Wenn du dein Passwort vergessen hast, kannst du es <a href="password/forgot">hier</a> erneuern.</span>
+        </ajax>
+        <p class="text-center">Du hast bereits einen Account?<br><a href="/Anmelden">Jetzt Anmelden</a></p>
+      </div>
+    </div>
+  </div>
+  <%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
+  

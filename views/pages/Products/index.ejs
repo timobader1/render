@@ -5,7 +5,7 @@
     </div>
     <div class="item-content">
         <table class="table table-bordered border-black table table-striped">
-            <thead class="table-active">
+            <thead class="table-active" theme="light">
                 <th scope="col">Name</th>
                 <th scope="col">Modell</th>
                 <th scope="col">Kategorie</th>
@@ -30,12 +30,14 @@
                         <td>
                             <a class="button text-black" href="/products/<%= product.id %>">anzeigen</a>
                         </td>
+                        <% if(req.me.isSuperAdmin) { %>
                         <td>
                             <a class="button text-black" href="/products/<%= product.id %>/edit">bearbeiten</a>
                         </td>
                         <td>
                             <a class="button text-black" href="/products/<%= product.id %>/destroy">löschen</a>
                         </td>
+                        <% } %>
                     </tr>
                     <% }); %>
             </tbody>

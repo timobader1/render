@@ -5,7 +5,7 @@
   <title>TurboParts24</title>
 
   <!-- Viewport mobile tag for sensible mobile support -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" charset="UTF-8">
 
   <% /* If you want to discourage search engines from indexing this site, uncomment the following line: */%>
     <% /* <meta name="robots" content="noindex"> */%>
@@ -34,6 +34,7 @@
 
       <!--STYLES-->
       <link rel="stylesheet" href="/dependencies/bootstrap.css">
+      <link rel="stylesheet" href="/dependencies/vuetify.min.css">
       <link rel="stylesheet" href="/styles/importer.css">
       <link rel="stylesheet" href="/styles/style.css">
       <!--STYLES END-->
@@ -55,6 +56,8 @@
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <!-- LOGGED-IN NAVIGATION -->
+              <% if(req.me) { %>
               <li class="nav-item">
                 <a class="nav-link" href="/Start">Start</a>
               </li>
@@ -62,14 +65,40 @@
                 <a class="nav-link" href="/Suche">Suche</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="/Suche#/basket">Warenkorb</a>
+              </li>
+              <!-- Added Block für Super user Navigation-->
+              <% if(req.me.isSuperAdmin) { %>
+              <li class="nav-item">
                 <a class="nav-link" href="/Admin">Admin</a>
               </li>
+              <% } %>
+              <% if(req.me.isSellerOrAdmin) { %>
+                <li class="nav-item">
+                  <a class="nav-link" href="/Products">Produkte</a>
+                </li>
+              <% } %>
               <li class="nav-item">
-                <a class="nav-link" href="#">Über uns</a>
+                <a class="nav-link" href="UeberUns">Über uns</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Abmelden">Abmelden</a>
+              </li>
+              <% } else { %>
+              <!-- LOGGED-OUT NAVIGATION -->
+              <li class="nav-item">
+                <a class="nav-link" href="/Start">Start</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Suche">Suche</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/UeberUns">Über uns</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/Anmelden">Anmelden</a>
               </li>
+              <% } %>
             </ul>
           </div>
         </div>
@@ -171,11 +200,14 @@
           + Use a different preprocessor, like TypeScript
 
     -->
-
-  <!--SCRIPTS-->
-  <script src="/dependencies/sails.io.js"></script>
-  <script src="/dependencies/bootstrapjs.js"></script>
-  <!--SCRIPTS END-->
+<!--SCRIPTS-->
+<script src="/dependencies/sails.io.js"></script>
+<script src="/dependencies/vue.global.js"></script>
+<script src="/dependencies/vue-router.global.js"></script>
+<script src="/dependencies/bootstrapjs.js"></script>
+<script src="/dependencies/vuetify.min.js"></script>
+<!--SCRIPTS END-->
+  
 </body>
 
 </html>

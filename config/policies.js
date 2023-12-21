@@ -18,5 +18,31 @@ module.exports.policies = {
   ***************************************************************************/
 
   // '*': true,
+  '*': 'is-logged-in',
 
+  // Bypass the `is-logged-in` policy for:
+  'entrance/*': true,
+  'account/logout': true,
+  'api/product/index':true,
+  'view-admin': 'is-super-admin',
+
+  CarBrandController: {
+    '*': 'is-super-admin',
+  },
+  CarModelController: {
+    '*': 'is-super-admin',
+  },
+ CategoryController: {
+    '*': 'is-super-admin',
+  },
+  ProductController: {
+    'create': 'is-seller-or-admin',
+    'find': true,
+    'destroyOne': 'is-super-admin',
+    'new': 'is-seller-or-admin',
+    'findOne': true,
+    'editOne': 'is-super-admin',
+    'updateOne': 'is-super-admin',
+  },
+ 
 };

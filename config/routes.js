@@ -21,12 +21,11 @@ module.exports.routes = {
 
   '/': { view: 'pages/Home' },
   'GET /Anmelden': { view: 'pages/Login' },
-  'GET /Admin': {view: 'pages/Admin'},
-  'GET /Suche': {view: 'pages/search'},
+  'GET /Admin': {action: 'view-admin'},
+  'GET /Suche': {action: 'view-all-products'},
   'GET /Start': { view: 'pages/Home' },
+  'GET /UeberUns': { view: 'pages/UeberUns' },
   
-
-
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *
@@ -42,7 +41,7 @@ module.exports.routes = {
   'GET /category': { controller: 'CategoryController', action: 'find' },
   'GET /products': { controller: 'ProductController', action: 'find' },
 
-  'GET /carbrand/new': {view: 'pages/CarBrand/new'},
+  'GET /carbrand/new': {controller: 'CarBrandController', action: 'new'},
   'POST /carbrand': { controller:'CarBrandController', action: 'create'},
   'GET /carbrand/:id/destroy': {controller:'CarBrandController', action: 'destroyOne'},
 
@@ -50,15 +49,26 @@ module.exports.routes = {
   'POST /carmodel': {controller: 'CarModelController', action:'create'},
   'GET /carmodel/:id/destroy': {controller:'CarModelController', action: 'destroyOne'},
 
-  'GET /category/new': {view: 'pages/Category/new'},
+  'GET /category/new': {controller:'CategoryController', action: 'new'},
   'POST /category': { controller:'CategoryController', action: 'create'},
   'GET /category/:id/destroy': {controller:'CategoryController', action: 'destroyOne'},
 
   'GET /products/new': {controller:'ProductController', action:'new'},
   'POST /products': {controller: 'ProductController', action:'create'},
   'GET /products/:id/destroy': {controller:'ProductController', action: 'destroyOne'},
-  'GET /products/:id': 'product.findOne',
+  'GET /products/:id': {controller:'ProductController', action: 'findOne'},
   'GET /products/:id/edit': {controller:'ProductController', action: 'editOne'},
   'POST /products/:id/update': {controller:'ProductController', action: 'updateOne'},
-  
+
+  'GET   /Abmelden':                       { action: 'account/logout' },
+  'POST  /login':                          { action: 'entrance/login' },
+  'POST  /signup':                         { action: 'entrance/signup' },
+  'POST  /updateProfile':                  { action: 'account/update-profile' },
+  'POST  /updatePassword':                 { action: 'account/update-password' },
+  'GET   /Registrieren':                   { action: 'entrance/view-signup' },
+
+  'GET /api/product': { action: 'api/product/index'},
+  'GET /api/basket': {  action:'api/basket/get' },
+  'DELETE /api/basket': {  action:'api/basket/remove' },
+  'POST /api/basket': {  action:'api/basket/add' },
 };

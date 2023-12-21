@@ -26,5 +26,14 @@ module.exports.bootstrap = async function() {
   //   // etc.
   // ]);
   // ```
-
+  if (await User.count() > 0) {
+    return;
+    }
+    
+    await User.createEach([
+    { emailAddress: 'ti261bad@htwg-konstanz.de', fullName: 'Timo Bader', isSuperAdmin: true, password: await sails.helpers.passwords.hashPassword('test123') },
+    { emailAddress: 'pa741pel@htwg-konstanz.de', fullName: 'Patrick Peltzer', isSuperAdmin: true, password: await sails.helpers.passwords.hashPassword('test456') },
+    { emailAddress: 'benutzer@mail.de', fullName: 'Benutzer', isSuperAdmin: false, password: await sails.helpers.passwords.hashPassword('test789') },
+    { emailAddress: 'seller@mail.de', fullName: 'Seller', isSellerOrAdmin: true, password: await sails.helpers.passwords.hashPassword('test135') },
+    ])
 };
