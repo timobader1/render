@@ -67,11 +67,8 @@ module.exports.routes = {
   'POST  /updatePassword':                 { action: 'account/update-password' },
   'GET   /Registrieren':                   { action: 'entrance/view-signup' },
 
-  'GET /shoppingbasket': 'ShoppingBasketController.show',
-  'GET /shoppingbasket/put/:productid': 'ShoppingBasketController.put',
-  'GET /shoppingbasket/remove/:productid': 'ShoppingBasketController.remove',
-
   'GET /api/product': { action: 'api/product/index'},
   'GET /api/basket': {  action:'api/basket/get' },
-    'POST /api/basket': {  action:'api/basket/add' },
+  'DELETE /api/basket': {  action:'api/basket/remove' },
+  'POST /api/basket': {  action:'api/basket/add' },
 };

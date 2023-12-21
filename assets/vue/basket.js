@@ -1,31 +1,44 @@
 export default {
-    data() {
-      return {
-        basket: [],
-      };
-    },
-    created() {
-      let url = new URL(origin + '/api/basket');
+  data() {
+    return {
+      basket: [],
+    };
+  },
+  created() {
+    this.loadBasket();
+  },
+    methods: {
+      remove: function (index) {
+        let url = new URL(origin + "/api/basket");
+        let data = new FormData();
+        data.append("index", index);
+        fetch(url, {
+          method: "DELETE",
+          body: data,
+        }).then((result) => {
+          this.loadBasket();
+        });
+      },
+      loadBasket: function() {
+        let url = new URL(origin + '/api/basket');
       fetch(url)
       .then(res => res.json())
       .then(data => this.basket = data.basket)
-    },
-    methods: {
-  
+      }
     },  
     template: `
     <div class="container">
     <h2 class="mt-4">Ihr Einkauswagen</h2>
       <table class="table mt-4">
           <tr v-for="(item,index) in basket">
-              <td class="menu-title">
+              <td class="product-title">
                   {{ item.titel}}
               </td>
-              <td class="menu-price">
+              <td class="product-price">
                   {{ item.preis}} &euro;
               </td>
-              <td class="menu-price">
-                  <a class="badge badge-primary" href="/shoppingbasket/remove/{{index}}">entfernen</a>
+              <td>
+              <span class="ml-2 btn btn-outline-primary" @click="remove(index)">Entfernen</span>
               </td>
           </tr>
       </table>
