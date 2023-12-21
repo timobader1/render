@@ -29,12 +29,12 @@ export default {
     template: `
     <div class="container">
     <h2 class="mt-4">Ihr Einkauswagen</h2>
-      <table class="table mt-4">
+      <table class="table table-bordered mt-4">
           <tr v-for="(item,index) in basket">
-              <td class="product-title">
+              <td class="text-white">
                   {{ item.titel}}
               </td>
-              <td class="product-price">
+              <td class="text-white">
                   {{ item.preis}} &euro;
               </td>
               <td>
@@ -43,7 +43,7 @@ export default {
           </tr>
       </table>
       <router-link class="btn btn-secondary mr-5" to="/">Weiter einkaufen</router-link>
-      <router-link class="btn btn-primary" to="/">Bestellung abschliessen</router-link>
+      <router-link class="btn btn-light" to="/">Bestellung abschliessen</router-link>
       </div>
       `,
   };

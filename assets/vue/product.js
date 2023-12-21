@@ -26,36 +26,36 @@ export default {
     },
     template: `
       <div class="container">
-          <span class="h1">Produkte</span>
+          <h1>Produkte</h1>
           <hr>
-          <table class="table mt-4">
+          <table class="table table-bordered mt-4">
           <thead>
           <tr>
-                <th class="text-left">Titel</th>
-                <th class="text-left">Beschreibung</th>
+                <th>Titel</th>
+                <th>Beschreibung</th>
            
-                <th class="text-left">Preis</th>
-                <th class="text-left">Modell</th>
-                <th class="text-left">Kategorie</th>
-                <th class="text-center">Warenkorb</th>
+                <th>Preis</th>
+                <th>Modell</th>
+                <th>Kategorie</th>
+                <th>Warenkorb</th>
                 </tr>
             </thead>
             <tbody>
             <tr v-for="product in this.products">
-            <td>
+            <td class="align-middle">
             {{ product.titel }}
             </td>
-            <td>
+            <td class="align-middle">
             {{ product.beschreibung }}
             </td>
             
-            <td>
+            <td class="align-middle">
             {{ product.preis }}
             </td>
-            <td>
+            <td class="align-middle">
             {{ product.carmodel.name }}
             </td>
-             <td>
+             <td class="align-middle">
              {{ product.category.name }}
              </td>
              <td>

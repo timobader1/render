@@ -87,3 +87,8 @@ p {
         background-size: auto;
     }
 }
+
+input[type=text] {
+    border: 1px solid white;
+    border-radius: 4px;
+  }
