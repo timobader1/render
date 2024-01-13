@@ -19,7 +19,6 @@
                 <input type="numeric" class="form-control" maxlength="255" name="preis">
             </div>
         </div>
-
         <div class="form-group">
             <label class="col-form-label-lg text-white">Modell</label>
             <select class="form-control" name="carmodel">
@@ -39,6 +38,11 @@
                     </option>
                     <% }); %>
             </select>
+        </div>
+        <div class="form-group">
+            <label class="col-form-label-lg text-white">Produktbild</label>
+            <input type="file" class="form-control" name="image">
+            <a  href="/product/<%=product.id %>/uploadImageForm" class="btn btn-primary">Bild Hochladen</a>
         </div>
         <button type="submit" class="btn btn-light mt-4">Hinzufügen</button>
     </form>

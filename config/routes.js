@@ -59,6 +59,8 @@ module.exports.routes = {
   'GET /products/:id': {controller:'ProductController', action: 'findOne'},
   'GET /products/:id/edit': {controller:'ProductController', action: 'editOne'},
   'POST /products/:id/update': {controller:'ProductController', action: 'updateOne'},
+  'GET /products/:id/uploadImageForm': { controller: 'ProductController', action: 'uploadImageForm' },
+  'POST /products/:id/uploadImage': { controller: 'ProductController', action: 'uploadImage' },
 
   'GET   /Abmelden':                       { action: 'account/logout' },
   'POST  /login':                          { action: 'entrance/login' },
