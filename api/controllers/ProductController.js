@@ -70,7 +70,7 @@ module.exports = {
   uploadImageForm: async function (req, res) {
     sails.log.debug("Upload image form....")
     let product = await Product.findOne({ id: req.params.id })
-    res.view('pages/product/uploadImageForm', { product: product });
+    res.view('pages/products/uploadImageForm', { product: product });
   },
 
   uploadImage: async function (req, res) {
