@@ -29,13 +29,13 @@ export default {
           <h1>Produkte</h1>
           <hr>
         
-
-            <div class="row" v-for="product in this.products">
-              <div class="col-lg-4 col-md-6 mb-4">
+          <div div class="row">
+              <div class="col-lg-4 col-md-6 mb-4" v-for="product in this.products">
                 <div class="card">
                   <div class="card-body">
                     <h5 class="card-title">{{ product.titel }}</h5>
-                    <img src="/images/image_placeholder.png" alt="Beschreibung des Bildes" style="width:200px">
+                    
+                    <img :src="'https://wetebucket.s3.us-west-2.amazonaws.com/' + product.image" alt="Bild nicht gefunden" style="width:200px"/>
                     <p class="card-text text-black">Preis: {{ product.preis }}$</p>
                     <p class="card-text text-black">{{ product.beschreibung }}</p>
                     <p class="card-text text-black">Kategorie: {{ product.category.name }}</p>
@@ -43,7 +43,6 @@ export default {
                   </div>
                 </div>
               </div>
-              
             </div>
       </div>`,
   };

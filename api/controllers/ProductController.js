@@ -94,7 +94,7 @@ module.exports = {
         sails.log("Uploaded!")
       }
       let fname = require('path').basename(uploadedFiles[0].fd);
-      await product.updateOne({ id: req.params.id }).set({ image:fname });
+      await Product.updateOne({ id: req.params.id }).set({ image:fname });
       return res.redirect('/product');
     };
 
