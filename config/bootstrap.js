@@ -90,7 +90,7 @@ module.exports.bootstrap = async function() {
           await Product.createEach([
             { titel:"Rotiform DTM 8,5x19 5/112 ET45", beschreibung:"Silber, 1x Felge",image:"0361e291-1fce-4805-b54d-4082a80f87cf.png",preis:"375",carmodel: golf.id, category: felgen.id},
             { titel:"SRS-Tec Kotflügel GT vorne", beschreibung:"2,5 cm verbreiter, TÜV-Gutachten",image:"5cd2ff43-74be-4d62-b515-bc1e5b05e0f9.png",preis:"469",carmodel: scirocco.id, category: karosserieteile.id},
-            { titel:"TURBOSYSTEMS UPGRADE TURBOLADER", beschreibung:"Bis 600 P",image:"09c39bcf-b85b-459c-bad0-5f616f6af0be.webp",preis:"2199",carmodel: dreier.id, category: aufladung.id},
+            { titel:"TURBOSYSTEMS TURBOLADER", beschreibung:"Bis 600 P",image:"09c39bcf-b85b-459c-bad0-5f616f6af0be.webp",preis:"2199",carmodel: dreier.id, category: aufladung.id},
             { titel:"Remus Cat-Back-Anlage RACING", beschreibung:"Mit Klappe",image:"d1c6d7b6-c22e-47c6-9878-c36ff986e169.jpg",preis:"2256",carmodel: fuenfer.id, category: abgasanlage.id},
             { titel:"4x NGK ZÜNDKERZE", beschreibung:"Nickel-Mittelelektrode",image:"32c19213-f1ff-4612-a79e-ce484e526304.jpg",preis:"20",carmodel: a4.id, category: elektrik.id},
             { titel:"Fußmatten mit Nubukeinfassung", beschreibung:"Passgenau",image:"ed191b7f-4b04-4972-98a9-5d4748e4c060.jpg",preis:"96",carmodel: gt3rs.id, category: innenausstattung.id},
