@@ -22,4 +22,9 @@ module.exports = {
     new: async function (req, res) {
       res.view('pages/Category/new', { });
     },
+    findOne: async function (req, res) {
+      sails.log.debug("List single Category....")
+      let category = await Category.findOne({ id: req.params.id });
+      res.view('pages/Products/show', { product });
+    },
   };

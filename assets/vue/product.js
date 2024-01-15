@@ -39,6 +39,7 @@ export default {
                     <p class="card-text text-black">Preis: {{ product.preis }}$</p>
                     <p class="card-text text-black">{{ product.beschreibung }}</p>
                     <p class="card-text text-black">Kategorie: {{ product.category.name }}</p>
+                    <p class="card-text text-black">{{ product.carmodel.carbrand.name }} {{ product.carmodel.name }}</p>
                     <span :id="product.id" class="ml-2 btn btn-outline-primary" @click="order">Zum Warenkorb hinzufügen</span>
                   </div>
                 </div>

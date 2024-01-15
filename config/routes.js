@@ -43,11 +43,11 @@ module.exports.routes = {
 
   'GET /carbrand/new': {controller: 'CarBrandController', action: 'new'},
   'POST /carbrand': { controller:'CarBrandController', action: 'create'},
-  'GET /carbrand/:id/destroy': {controller:'CarBrandController', action: 'destroyOne'},
+  'GET /carbrand/:id/destroy': {controller:'CarBrandController', action: 'destroy'},
 
   'GET /carmodel/new': {controller:'CarModelController', action:'new'},
   'POST /carmodel': {controller: 'CarModelController', action:'create'},
-  'GET /carmodel/:id/destroy': {controller:'CarModelController', action: 'destroyOne'},
+  'GET /carmodel/:id/destroy': {controller:'CarModelController', action: 'destroyEachModel'},
 
   'GET /category/new': {controller:'CategoryController', action: 'new'},
   'POST /category': { controller:'CategoryController', action: 'create'},

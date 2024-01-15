@@ -103,4 +103,19 @@ module.exports = {
       // uploaded files contains an array of the files which have been uploaded, in our case only one.
       await req.file('image').upload(params, callback);
     },
+
+    destroyProducts: async function (req, res) {
+      sails.log.debug("Destroy all products from car model....")
+      let products;
+      if (req.query.id && req.query.id.length > 0)
+      {
+        products = await Product.find({
+          carmodel: {
+            'contains': req.query.id
+          },
+        })
+      }
+      products.forEach((element) => Product.destroyOne(element.id));
+      res.redirect('/Admin');
+    },
 };
