@@ -6,6 +6,7 @@ module.exports.routes = {
   'GET /Start': {view: 'pages/Home'},
   'GET /UeberUns': {view: 'pages/UeberUns'},
   'GET /Impressum': {view: 'pages/impressum'},
+  'GET /Profil': {view: 'pages/User'},
   'GET /carbrand': {controller: 'CarBrandController', action: 'find'},
   'GET /carmodel': {controller: 'CarModelController', action: 'find'},
   'GET /category': {controller: 'CategoryController', action: 'find'},

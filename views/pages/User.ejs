@@ -4,7 +4,7 @@
             <h2>Profil</h2>
             <div>
                 <div class="mb-3">
-                    <label class="form-label text-white">Name</label>
+                    <label class="form-label text-white"><%= User.fullName %></label>
                     <input
                         type="text"
                         class="form-control"
@@ -14,7 +14,7 @@
                     <button class="submit btn btn-light">Speichern</button>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label text-white">Email</label>
+                    <label class="form-label text-white"><%= User.emailAddress %></label>
                     <input
                         type="text"
                         class="form-control"
