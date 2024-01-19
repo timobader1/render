@@ -1,1 +1,1 @@
-module.exports.blueprints={};
+module.exports.blueprints = {};

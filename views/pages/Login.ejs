@@ -1,29 +1,32 @@
 <div id="login">
-    <div class="container-fluid pt-5 pb-5">
-      <h1 class="text-center">Jetzt Anmelden</h1>
-      <div style="max-width: 450px;" class="mx-auto">
-        <hr/>
-        <form action="login" method="POST">
-          <div class="form-group">
-            <input type="email" name="emailAddress" class="form-control" placeholder="Email Adresse" autocomplete="email" focus-first>
-            <div class="invalid-feedback">Bitte gebe eine gültige E-mail Adresse ein.</div>
-          </div>
-          <div class="form-group mt-1">
-            <input name="password" type="password" class="form-control" placeholder="Passwort" autocomplete="current-password">
-            <div class="invalid-feedback">Bitte gebe dein Passowort ein.</div>
-          </div>
-          <div class="form-group form-check mt-2 mb-3">
-            <input class="form-check-input" type="checkbox" id="remember" name="rememberMe"/>
-            <label class="form-check-label text-white" for="remember">Merken</label>
-          </div>
-          <span class="text-white">Deine Anmeldedaten konnten keinem bestehenden Account zugeordenet werden?<br>Bitte überprüfe deine Email Adresse und/oder dein Passwort und versuche es erneut.</span>
-          <div class="form-group my-2">
-            <button type="submit" class="btn btn-light btn-lg btn-block">Anmelden</button>
-          </div>
-        </form>
-        <p class="text-center">Du hast noch keinen Account?<br><a href="/Registrieren">Jetzt Registrieren</a></p>
-        <p class="text-center">Du hast dein Passtwort vergessen?<br><a href="/password/forgot">Passwort erneuern</a></p>
-      </div>
+  <div class="container-fluid pt-5 pb-5">
+    <h1 class="text-center">Jetzt Anmelden</h1>
+    <div style="max-width: 450px;" class="mx-auto">
+      <hr />
+      <form action="login" method="POST">
+        <div class="form-group">
+          <input type="email" name="emailAddress" class="form-control" placeholder="Email Adresse" autocomplete="email"
+            focus-first>
+          <div class="invalid-feedback">Bitte gebe eine gültige E-mail Adresse ein.</div>
+        </div>
+        <div class="form-group mt-1">
+          <input name="password" type="password" class="form-control" placeholder="Passwort"
+            autocomplete="current-password">
+          <div class="invalid-feedback">Bitte gebe dein Passowort ein.</div>
+        </div>
+        <div class="form-group form-check mt-2 mb-3">
+          <input class="form-check-input" type="checkbox" id="remember" name="rememberMe" />
+          <label class="form-check-label text-white" for="remember">Merken</label>
+        </div>
+        <span class="text-white">Deine Anmeldedaten konnten keinem bestehenden Account zugeordenet werden?<br>Bitte
+          überprüfe deine Email Adresse und/oder dein Passwort und versuche es erneut.</span>
+        <div class="form-group my-2">
+          <button type="submit" class="btn btn-light btn-lg btn-block">Anmelden</button>
+        </div>
+      </form>
+      <p class="text-center">Du hast noch keinen Account?<br><a href="/Registrieren">Jetzt Registrieren</a></p>
+      <p class="text-center">Du hast dein Passtwort vergessen?<br><a href="/password/forgot">Passwort erneuern</a></p>
     </div>
   </div>
-  <%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
+</div>
+<%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>

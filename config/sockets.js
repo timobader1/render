@@ -1,1 +1,1 @@
-module.exports.sockets={};
+module.exports.sockets = {};

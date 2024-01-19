@@ -1,1 +1,1 @@
-module.exports.security={};
+module.exports.security = {};

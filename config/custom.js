@@ -1,1 +1,1 @@
-module.exports.custom={};
+module.exports.custom = {};

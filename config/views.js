@@ -1,1 +1,1 @@
-module.exports.views={layout:"layouts/layout"};
+module.exports.views = {layout: 'layouts/layout'};

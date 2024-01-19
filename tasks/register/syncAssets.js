@@ -1,1 +1,3 @@
-module.exports=function(s){s.registerTask("syncAssets",["less:dev","sync:dev"])};
+module.exports = function (s) {
+  s.registerTask ('syncAssets', ['less:dev', 'sync:dev']);
+};
