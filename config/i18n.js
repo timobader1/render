@@ -1,1 +1,1 @@
-module.exports.i18n={locales:["en","es","fr","de"]};
+module.exports.i18n = {locales: ['en', 'es', 'fr', 'de']};

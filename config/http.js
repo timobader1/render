@@ -1,1 +1,1 @@
-module.exports.http={middleware:{}};
+module.exports.http = {middleware: {}};
