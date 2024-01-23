@@ -5,7 +5,7 @@ module.exports = {
     password: {
       description: 'The new, unencrypted password.',
       example: 'abc123v2',
-      required: !0,
+      required: true,
     },
   },
   exits: {
@@ -19,11 +19,13 @@ module.exports = {
       responseType: 'redirect',
     },
   },
-  fn: async function({password: e}) {
+  fn: async function({password}) {
     sails.log.debug ('Update Password....');
-    var s = await sails.helpers.passwords.hashPassword (e);
-    throw (await User.updateOne ({id: this.req.me.id}).set ({password: s}), {
-      redirect: '/account',
+    var hashed = await sails.helpers.passwords.hashPassword (password);
+    await User.updateOne({ id: this.req.me.id })
+    .set({
+      password: hashed
     });
-  },
+    throw {redirect: '/Profil'};
+  }
 };

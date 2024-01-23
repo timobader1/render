@@ -13,7 +13,9 @@ module.exports = {
     },
   },
   fn: async function () {
-    if ((delete this.req.session.userId, !this.req.wantsJSON))
+    delete this.req.session.userId;
+    if (!this.req.wantsJSON) {
       throw {redirect: '/Anmelden'};
+    }
   },
 };

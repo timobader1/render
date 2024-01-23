@@ -6,7 +6,7 @@ module.exports = {
     return {
       stripePublishableKey: sails.config.custom.enableBillingFeatures
         ? sails.config.custom.stripePublishableKey
-        : void 0,
+        : undefined,
     };
   },
 };

@@ -1,0 +1,38 @@
+<div id="edit-profile" v-cloak>
+    <account-notification-banner></account-notification-banner>
+    <div class="container pt-5 pb-5">
+      <h1>Benutzer Informationen ändern</h1>
+      <hr/>
+      <form action="/updateProfile" method="POST">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group text-white">
+              <label for="full-name">Vollständiger Name</label>
+              <input class="form-control" id="full-name" name="fullName" type="text"  placeholder="Sturgis P. Sturgeon" autocomplete="name" focus-first value="<%= req.me.fullName %>">
+              <div class="invalid-feedback">Bitte gebe deinen vollständigen Namen ein.</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group text-white">
+              <label for="email-address">Email Adresse</label>
+              <input class="form-control" id="email-address" name="emailAddress" type="email" placeholder="sturgeon@example.com" autocomplete="email" value="<%= req.me.emailAddress %>">
+              <div class="invalid-feedback">Bitte gebe eine valide Email ein.</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 text-white">
+            Es existiert bereits ein Account mit dieser Email.
+          </div>
+          <div class="col-sm-12">
+            <div class="form-group">
+              <a class="btn btn-light" href="/Profil">Zurück</a>
+              <button type="submit"  class="btn btn-light">Speichern</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
+  

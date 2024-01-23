@@ -1,0 +1,43 @@
+<div id="account-overview">
+    <account-notification-banner></account-notification-banner>
+    <div class="container pt-5 pb-5">
+      <h1>Mein Account</h1>
+      <hr/>
+      <div class="row mb-3">
+        <div class="col-sm-6">
+          <h4 class="text-white mb-3">Persönliche Informationen</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3 text-white">Name:</div>
+        <div class="col text-white"><strong><%= req.me.fullName %></strong></div>
+      </div>
+      <div class="row">
+        <div class="col-3 text-white">Email:</div>
+        <div class="col text-white">
+          <strong><%= req.me.emailAddress %></strong>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <a style="width: 150px" class="btn btn-light" href="/Profil/benutzer">Bearbeiten</a>
+        </div>
+      </div>
+      <hr/>
+      <div class="row mb-3">
+        <div class="col-sm-6">
+          <h4 class="text-white mb-3">Passwort</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3 text-white">Passwort:</div>
+        <div class="col text-white"><strong>••••••••••</strong></div>
+      </div>  
+      <div class="row">
+        <div class="col">
+          <a style="width: 150px" class="btn btn-light" href="/Profil/passwort">Bearbeiten</a>
+        </div>
+      </div>  
+  </div>
+  <%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
+  
