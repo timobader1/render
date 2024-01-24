@@ -3,7 +3,7 @@ module.exports.routes = {
   'GET /Anmelden': {view: 'pages/Login'},
   'GET /Admin': {action: 'view-admin'},
   'GET /Suche': {action: 'view-all-products'},
-  'GET /Start': {view: 'pages/Home'},
+  'GET /Home': {view: 'pages/Home'},
   'GET /UeberUns': {view: 'pages/UeberUns'},
   'GET /Impressum': {view: 'pages/impressum'},
   'GET /Ordered': {view: 'pages/Ordered'},
