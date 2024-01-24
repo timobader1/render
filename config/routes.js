@@ -6,6 +6,7 @@ module.exports.routes = {
   'GET /Start': {view: 'pages/Home'},
   'GET /UeberUns': {view: 'pages/UeberUns'},
   'GET /Impressum': {view: 'pages/impressum'},
+  'GET /Ordered': {view: 'pages/Ordered'},
   'GET /Profil': {action: 'account/view-account-overview'},
   'GET /Profil/benutzer': {action: 'account/view-edit-profile'},
   'GET /Profil/passwort': {action: 'account/view-edit-password'},
