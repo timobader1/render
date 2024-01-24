@@ -22,7 +22,7 @@ export default {
                 <hr>
                 <div div class="row">
                     <div class="col-lg-4 col-md-6 mb-4" v-for="product in this.products">
-                        <div class="card">
+                        <div class="card" style="min-width: 400px">
                             <div class="card-body">
                                 <h5 class="card-title">{{ product.titel }}</h5> <img
                                     :src="\'https://wetebucket.s3.us-west-2.amazonaws.com/\' + product.image"
