@@ -21,12 +21,12 @@ export default {
                 <h1>Produkte</h1>
                 <hr>
                 <div div class="row">
-                    <div class="col-lg-4 col-md-6 mb-4" v-for="product in this.products">
-                        <div class="card" style="min-width: 400px">
-                            <div class="card-body">
+                    <div class="col-lg-4 col-md-6 mb-4" style="min-width: 350px" v-for="product in this.products">
+                        <div class="card p-0">
+                            <div class="card-body p-0 m-1">
                                 <h5 class="card-title">{{ product.titel }}</h5> <img
                                     :src="\'https://wetebucket.s3.us-west-2.amazonaws.com/\' + product.image"
-                                    alt="Bild nicht gefunden" style="height:200px" />
+                                    alt="Bild nicht gefunden" style="height:200px; max-width:320px" />
                                 <p class="card-text text-black">Preis: {{
                                     product.preis }}$</p>
                                 <p class="card-text text-black">{{ product.beschreibung }}</p>
