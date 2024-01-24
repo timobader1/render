@@ -49,6 +49,6 @@ module.exports = {
               sails.config.custom.rememberMeCookieMaxAge)), (this.req.session.userId =
         i.id), !this.req.wantsJSON)
     )
-      throw {redirect: '/Start'};
+      throw {redirect: '/Home'};
   },
 };
